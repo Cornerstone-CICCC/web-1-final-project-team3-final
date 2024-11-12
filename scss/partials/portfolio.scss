@@ -1,4 +1,5 @@
 @use "variables";
+@use "reset";
 
 .portfolio {
     text-align: center;
@@ -28,7 +29,25 @@
         }
     }
     .page-contents {
-        
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        ol, ul, li {
+            list-style: none;
+        }
+        article {
+            ul {
+                display: grid;
+                grid-template-columns: repeat(1, 1fr);
+                row-gap: 12px;
+            }
+            li {
+                overflow: hidden;
+            }
+            img {
+                width: 100%;
+            }
+        }
     }
 }
 
@@ -46,6 +65,18 @@
             }
             p {
                 font-size: 18px;
+            }
+        }
+        .page-contents {
+            article {
+                ul {
+                    grid-template-columns: repeat(3, 1fr);
+                    gap: 16px;
+                    li {
+                        width: 335px;
+                        height: 347px;
+                    }
+                }
             }
         }
     }
