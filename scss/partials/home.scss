@@ -1,0 +1,72 @@
+@use 'variables.scss';
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: variables.$primary-color;
+}
+
+menu.container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+    background-color: variables.$primary-color;
+
+    ul {
+        display: flex;
+        list-style: none;
+        padding: 32px 0;
+        gap: 50px;
+
+        li {
+            justify-content: space-between;
+            font-family: variables.$primary-font;
+            font-weight: 400;
+            font-size: 20px;
+            color: variables.$header-color;
+            img {
+                width: 126.19px;
+                height: 132px;
+                top: 32px;
+            }
+
+        }
+    }
+}
+
+//Queries
+
+// For smaller Mobile Devices
+@media (max-width: 480px) { 
+    menu.container ul { 
+        gap: 10px; /* Further reduce gap between items */ 
+    } 
+    menu.container li { 
+        font-size: 16px; /* Further adjust font size */ 
+        line-height: 24px; /* Further adjust line height */ 
+    } 
+}
+
+//For mobile devices
+@media (max-width: 768px) { 
+    menu.container ul { 
+        flex-direction: column; /* Stack items vertically */ 
+        align-items: center; /* Center items horizontally */ 
+        gap: 20px; /* Reduce gap between items */ 
+    } 
+    menu.container li { 
+        font-size: 18px; /* Adjust font size */ 
+        line-height: 28px; /* Adjust line height */ 
+    } 
+} 
+
+//For laptops
+@media (max-width: 1200px){
+
+}
