@@ -8,6 +8,7 @@ body {
     background-color: variables.$primary-color;
 }
 
+//Menu
 nav.container-fluid {
     width: 100%;
     margin-left: auto;
@@ -45,6 +46,15 @@ nav.container-fluid {
                 padding-left: 40px;
             }
         }
+    }
+}
+
+//Header
+header.container-fluid {
+    img.img-fluid {
+        max-width: 100%;
+        height: auto;
+
     }
 }
 
