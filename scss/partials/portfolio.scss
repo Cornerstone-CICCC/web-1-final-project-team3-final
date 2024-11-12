@@ -1,0 +1,52 @@
+@use "variables";
+
+.portfolio {
+    text-align: center;
+    .page-header {
+        h2 {
+            font-size: 40px;
+            line-height: 40px;
+            text-transform: uppercase;
+            color: #725A58;
+            position: relative;
+            padding-bottom: 24px;
+            margin-bottom: 24px;
+            &::after {
+                content: "";
+                display: block;
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                bottom: 0;
+                width: 139px;
+                height: 1px;
+                background-color: #E3B6B1;
+            }
+        }
+        p {
+            font-size: 16px;
+        }
+    }
+    .page-contents {
+        
+    }
+}
+
+@media (min-width: 700px) {
+    .portfolio {
+        .page-header {
+            h2 {
+                font-size: 80px;
+                line-height: 80px;
+                padding-bottom: 24px;
+                margin-bottom: 24px;
+                &::after {
+                    width: 200px;
+                }
+            }
+            p {
+                font-size: 18px;
+            }
+        }
+    }
+}
