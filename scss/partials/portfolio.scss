@@ -1,9 +1,18 @@
 @use "variables";
 @use "reset";
 
+ul, li, ol, div {
+    padding: 0;
+}
+button,
+label {
+    cursor: pointer;
+}
+
 .portfolio {
     text-align: center;
     .page-header {
+        padding: 16px 0 24px;
         h2 {
             font-size: 40px;
             line-height: 40px;
@@ -28,14 +37,43 @@
             font-size: 16px;
         }
     }
+    .page-tab {
+        margin-bottom: 24px;
+        ul {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            li {
+                border-bottom: 1px solid #888;
+            }
+            label {
+                color: #888;
+                font-size: 24px;
+                padding: 16px 24px;
+            }
+            input[type="radio"] {
+                -webkit-appearance: none;
+                appearance: none;
+            }
+            input[type="radio"]:checked + * {
+                color: #181818;
+                border-bottom: 1px solid #181818;
+            }
+        }
+    }
     .page-contents {
         display: flex;
         flex-direction: column;
         align-items: center;
+        background-color: #FAE9E7;
+        padding: 24px 0 40px;
         ol, ul, li {
             list-style: none;
         }
         article {
+            &.hide {
+                display: none;
+            }
             ul {
                 display: grid;
                 grid-template-columns: repeat(1, 1fr);
@@ -48,10 +86,18 @@
                 width: 100%;
             }
         }
+        .btn-more {
+            border: 1px solid #725A58;
+            color: #725A58;
+            padding: 15px 32px;
+            background-color: transparent;
+            font-size: 20px;
+            margin-top: 30px
+        }
     }
 }
 
-@media (min-width: 700px) {
+@media (min-width: 720px) {
     .portfolio {
         .page-header {
             h2 {
@@ -68,14 +114,31 @@
             }
         }
         .page-contents {
+            padding-bottom: 120px;
             article {
                 ul {
-                    grid-template-columns: repeat(3, 1fr);
+                    grid-template-columns: repeat(2, 1fr);
                     gap: 16px;
                     li {
                         width: 335px;
                         height: 347px;
                     }
+                }
+            }
+            .btn-more {
+                padding: 19px 32px;
+                margin-top: 60px;
+            }
+        }
+    }
+}
+
+@media (min-width: 1000px) {
+    .portfolio {
+        .page-contents {
+            article {
+                ul {
+                    grid-template-columns: repeat(3, 1fr);
                 }
             }
         }
