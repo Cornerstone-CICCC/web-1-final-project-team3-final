@@ -17,7 +17,7 @@ label {
             font-size: 40px;
             line-height: 40px;
             text-transform: uppercase;
-            color: #725A58;
+            color: variabled.$header-color;
             position: relative;
             padding-bottom: 24px;
             margin-bottom: 24px;
@@ -44,7 +44,7 @@ label {
             justify-content: center;
             align-items: center;
             li {
-                border-bottom: 1px solid #888;
+                // border-bottom: 1px solid #888;
             }
             label {
                 color: #888;
@@ -87,8 +87,8 @@ label {
             }
         }
         .btn-more {
-            border: 1px solid #725A58;
-            color: #725A58;
+            border: 1px solid variabled.$header-color;
+            color: variabled.$header-color;
             padding: 15px 32px;
             background-color: transparent;
             font-size: 20px;
