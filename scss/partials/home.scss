@@ -8,7 +8,7 @@ body {
     background-color: variables.$primary-color;
 }
 
-menu.container {
+nav.container-fluid {
     width: 100%;
     margin-left: auto;
     margin-right: auto;
@@ -18,55 +18,65 @@ menu.container {
     gap: 80px;
     background-color: variables.$primary-color;
 
+    menu {
+        background-color: variables.$primary-color;
+        padding: 0 15px;
+    }
+
     ul {
         display: flex;
         list-style: none;
         padding: 32px 0;
         gap: 50px;
+        justify-content: center;
+        width: 100%;
 
-        li {
-            justify-content: space-between;
+        li.nav-item {
             font-family: variables.$primary-font;
             font-weight: 400;
             font-size: 20px;
-            color: variables.$header-color;
-            img {
-                width: 126.19px;
-                height: 132px;
-                top: 32px;
-            }
+            color: variables.$li-color;
+            display: flex;
+            align-items: center;
+            justify-content: center;
 
+            #menu-line {
+                color: variables.$menu-line;
+                padding-left: 40px;
+            }
         }
     }
 }
 
 //Queries
-
-// For smaller Mobile Devices
-@media (max-width: 480px) { 
-    menu.container ul { 
-        gap: 10px; /* Further reduce gap between items */ 
-    } 
-    menu.container li { 
-        font-size: 16px; /* Further adjust font size */ 
-        line-height: 24px; /* Further adjust line height */ 
-    } 
-}
-
-//For mobile devices
+// For mobile devices 
 @media (max-width: 768px) { 
-    menu.container ul { 
-        flex-direction: column; /* Stack items vertically */ 
-        align-items: center; /* Center items horizontally */ 
-        gap: 20px; /* Reduce gap between items */ 
+    nav.container-fluid { 
+        flex-direction: column; 
     } 
-    menu.container li { 
-        font-size: 18px; /* Adjust font size */ 
-        line-height: 28px; /* Adjust line height */ 
-    } 
-} 
+    nav.container-fluid ul { 
+        flex-direction: column; // Stack items vertically 
+        align-items: center; // Center items horizontally 
+        gap: 20px; // Reduce gap between items 
+        } 
+        nav.container-fluid li { 
+            font-size: 18px; // Adjust font size 
+            line-height: 28px; // Adjust line height
+        }
+    }
 
-//For laptops
-@media (max-width: 1200px){
+// For smaller Mobile Devices 
+@media (max-width: 480px) {
+     nav.container-fluid ul {
+         gap: 10px; // Further reduce gap between items 
+         } 
+         nav.container-fluid li { 
+            font-size: 16px; // Further adjust font size 
+            line-height: 24px; // Further adjust line height 
+            } 
+        }
 
-}
+// For laptops 
+@media (max-width: 1200px) { 
+    // 
+    }
