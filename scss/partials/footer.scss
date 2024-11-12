@@ -1,0 +1,77 @@
+@use 'variables.scss';
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: variables.$text-darkbrown;
+
+
+    .footer_content {
+        text-align: center;
+
+        .logo {
+            .logo_img {
+                width: 80px;
+            }
+
+            font-size: 1.2rem;
+
+            div {
+                color: black;
+                font-size: 1.5rem;
+            }
+        }
+
+        .subtitle {
+            margin: 1.5rem 0 0 0;
+            font-size: 1rem;
+        }
+
+        .icons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            img {
+                margin: 1rem 1rem;
+            }
+        }
+
+        .footer_menu {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 10px;
+            margin: 0 3rem;
+            border-top: 1px solid variables.$text-black;
+            border-bottom: 1px solid variables.$text-black;
+
+            background-color: white div {
+                margin: 0 15px;
+                cursor: pointer;
+            }
+
+            .underline {
+                text-decoration: underline;
+            }
+        }
+
+        .copy-right {
+            padding: 2rem;
+            font-family: variables.$copyright-font;
+        }
+
+        @media (max-width: 768px) {
+            .footer_menu {
+                flex-wrap: wrap;
+
+                div {
+                    width: 50%;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
