@@ -1,5 +1,8 @@
+@use 'variables.scss';
+
 * {
     border: 0px;
     margin: 0px;
-    font-size: 100%;
+    background-color: variables.$primary-color;
+    font-family: variables.$primary-font;
 }
