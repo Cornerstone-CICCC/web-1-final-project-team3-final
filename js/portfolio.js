@@ -1,8 +1,8 @@
 const btnTabs = document.querySelectorAll(".btn-tab");
 const tabPanels = document.querySelectorAll(".page-contents article");
-const makeupLists = document.querySelectorAll(".makeup li");
-const hairstyleLists = document.querySelectorAll(".hairstyle li");
-const btnMore = document.querySelectorAll(".btn-more");
+const makeupLists = document.querySelectorAll(".makeup li:not(.show)");
+const hairstyleLists = document.querySelectorAll(".hairstyle li:not(.show)");
+const btnMores = document.querySelectorAll(".btn-more");
 const initialWidth = window.innerWidth;
 
 const IMAGE_MOBILE = 4;
@@ -31,9 +31,9 @@ function handleTab(event) {
 }
 
 function handleImages(width) {
-  if(innerWidth > 1000) {
+  if(width > 1000) {
     showImages(IMAGE_DESKTOP);
-  } else if(innerWidth > 600) {
+  } else if(width > 600) {
     showImages(IMAGE_TABLET);
   } else {
     showImages(IMAGE_MOBILE);
@@ -57,10 +57,23 @@ function showImages(count) {
   })
 }
 
+function handleViewMore(event) {
+  const target = event.target;
+  const panel = target.parentElement;
+  const windowWidth = window.innerWidth;
+
+  showImages(windowWidth);
+}
+
 btnTabs.forEach(btnTab => {
   btnTab.addEventListener("click", handleTab);
+})
+
+btnMores.forEach(btnMore => {
+  btnMore.addEventListener("click", handleViewMore)
 })
 
 window.addEventListener("resize", function (event) {
   handleImages(event.target.innerWidth);
 });
+
