@@ -60,7 +60,7 @@ header {
             height: 2.5rem;
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            justify-content: space-between;
             align-items: center;
             background: none;
             border: none;
@@ -73,7 +73,6 @@ header {
                 height: .125rem;
                 background-color: variables.$text-darkbrown;
                 display: block;
-                margin: .25rem 0;
             }
 
             &.active {
@@ -86,7 +85,7 @@ header {
                 }
 
                 span:nth-child(3) {
-                    transform: rotate(-45deg) translate(7px, -7px);
+                    transform: rotate(-45deg) translate(8px, -8px);
                 }
             }
         }
@@ -142,7 +141,8 @@ header {
                 position: absolute;
                 top: 7.5rem;
                 width: 100%;
-                padding: .4rem 0;
+                padding: 4rem 0;
+                gap: 1rem;
             }
         }
     }
