@@ -5,10 +5,11 @@ header {
         display: flex;
         justify-content: space-around;
         align-items: center;
-        padding: 2rem;
         height: 12.25rem;
         color: variables.$text-darkbrown;
         font-size: 1.25rem;
+        width: 100%;
+
 
         .mobile-elements {
             display: none;
@@ -74,6 +75,29 @@ header {
                 display: block;
                 margin: .25rem 0;
             }
+
+            &.active {
+                span:nth-child(1) {
+                    transform: rotate(45deg) translate(7px, 7px);
+                }
+
+                span:nth-child(2) {
+                    opacity: 0;
+                }
+
+                span:nth-child(3) {
+                    transform: rotate(-45deg) translate(7px, -7px);
+                }
+            }
+        }
+
+        .hamburger_menu {
+            display: none;
+
+            a {
+                color: inherit;
+                text-decoration: none;
+            }
         }
 
         @media (max-width: 768px) {
@@ -95,6 +119,7 @@ header {
 
                 .mobile-logo {
                     text-align: center;
+                    color: variables.$text-black;
 
                     .logo_img {
                         height: 4rem;
@@ -107,6 +132,17 @@ header {
                         height: 2.5rem;
                     }
                 }
+            }
+
+            .hamburger_menu.show {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                background-color: variables.$primary-color;
+                position: absolute;
+                top: 7.5rem;
+                width: 100%;
+                padding: .4rem 0;
             }
         }
     }
