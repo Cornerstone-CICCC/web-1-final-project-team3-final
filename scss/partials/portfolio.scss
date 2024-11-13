@@ -102,9 +102,10 @@ label {
                 row-gap: 12px;
             }
             li {
+                display: none;
                 overflow: hidden;
-                &.hide {
-                    display: none;
+                &.show {
+                    display: block;
                 }
             }
             img {
