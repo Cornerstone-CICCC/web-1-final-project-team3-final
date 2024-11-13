@@ -1,6 +1,8 @@
 @use "variables";
 @use "reset";
 
+@import url('https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
 ul, li, ol, div {
     padding: 0;
 }
@@ -14,13 +16,16 @@ label {
     .page-header {
         padding: 16px 0 24px;
         h2 {
+            font-family: "Baskervville", serif;
             font-size: 40px;
             line-height: 40px;
             text-transform: uppercase;
-            color: variabled.$header-color;
+            color: variables.$header-color;
             position: relative;
             padding-bottom: 24px;
             margin-bottom: 24px;
+            font-weight: 400;
+            letter-spacing: 13px;
             &::after {
                 content: "";
                 display: block;
@@ -35,29 +40,40 @@ label {
         }
         p {
             font-size: 16px;
+            font-family: "Nunito", sans-serif;
         }
     }
-    .page-tab {
+    .page-tabs {
         margin-bottom: 24px;
         ul {
             display: flex;
             justify-content: center;
             align-items: center;
-            li {
-                // border-bottom: 1px solid #888;
+            .page-tab {
+                border-bottom: 1px solid #888;
+                padding: 0 12px;
+                width: 242px;
+                position: relative;
+                &::after {
+                    content: "";
+                    display: block;
+                    width: 200px;
+                    height: 1px;
+                    position: absolute;
+                    bottom: -1px;
+                    transition: all .3s ease-in-out;
+                    transform: translateX(-50%);
+                }
             }
-            label {
+            .btn-tab {
                 color: #888;
                 font-size: 24px;
                 padding: 16px 24px;
-            }
-            input[type="radio"] {
                 -webkit-appearance: none;
                 appearance: none;
-            }
-            input[type="radio"]:checked + * {
-                color: #181818;
-                border-bottom: 1px solid #181818;
+                background-color: transparent;
+                position: relative;
+                font-family: "Baskervville", serif;
             }
         }
     }
@@ -81,14 +97,17 @@ label {
             }
             li {
                 overflow: hidden;
+                &.hide {
+                    display: none;
+                }
             }
             img {
                 width: 100%;
             }
         }
         .btn-more {
-            border: 1px solid variabled.$header-color;
-            color: variabled.$header-color;
+            border: 1px solid variables.$header-color;
+            color: variables.$header-color;
             padding: 15px 32px;
             background-color: transparent;
             font-size: 20px;
