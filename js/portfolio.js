@@ -26,10 +26,3 @@ function handleTab(event) {
 btnTabs.forEach(btnTab => {
   btnTab.addEventListener("click", handleTab);
 })
-
-window.addEventListener("resize", function (event) {
-
-  if(event.target.innerWidth > 500) {
-    console.log("true")
-  }
-})
