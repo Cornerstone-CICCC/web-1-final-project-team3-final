@@ -10,9 +10,13 @@ button,
 label {
     cursor: pointer;
 }
+* {
+    background-color: transparent;
+}
 
 .portfolio {
     text-align: center;
+    margin-bottom: 42px;
     .page-header {
         padding: 16px 0 24px;
         h2 {
@@ -20,7 +24,7 @@ label {
             font-size: 40px;
             line-height: 40px;
             text-transform: uppercase;
-            color: variables.$header-color;
+            color: variables.$text-darkbrown;
             position: relative;
             padding-bottom: 24px;
             margin-bottom: 24px;
@@ -52,12 +56,10 @@ label {
             .page-tab {
                 border-bottom: 1px solid #888;
                 padding: 0 12px;
-                width: 242px;
                 position: relative;
                 &::after {
                     content: "";
                     display: block;
-                    width: 200px;
                     height: 1px;
                     position: absolute;
                     bottom: -1px;
@@ -106,8 +108,8 @@ label {
             }
         }
         .btn-more {
-            border: 1px solid variables.$header-color;
-            color: variables.$header-color;
+            border: 1px solid variables.$text-darkbrown;
+            color: variables.$text-darkbrown;
             padding: 15px 32px;
             background-color: transparent;
             font-size: 20px;
