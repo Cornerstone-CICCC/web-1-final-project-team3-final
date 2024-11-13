@@ -1,0 +1,47 @@
+@use 'variables.scss';
+
+//Header
+header.container-fluid {
+    img.img-fluid {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 80px;
+        background-color: variables.$primary-color;
+    }
+
+    .main-title{
+        position: absolute;
+        top: 70%;
+        left: 50%;
+        transform: translate(-50%, -50%); 
+        color: black; 
+        font-size: 24px; 
+        font-weight: bold; 
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    .main-p {
+        position: absolute;
+        top: 80%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    button.consultation-btn {
+        position: absolute;
+        top: 90%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: transparent;
+        font-size: 20px;
+    }
+
+    .social-media-box {
+        
+    }
+}
