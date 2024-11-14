@@ -72,6 +72,11 @@ body.top {
         }
     }
 }
+body.burgerOpen {
+    .message-box-btns {
+        display: none;
+    }
+}
 
 .a11y-hidden {
     position: absolute;
