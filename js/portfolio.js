@@ -68,6 +68,7 @@ function handleViewMore(event) {
     const windowWidth = window.innerWidth;
 
     showImages(windowWidth, panelName);
+    this.classList.add("hide");
 }
 
 btnTabs.forEach(btnTab => {

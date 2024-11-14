@@ -62,10 +62,10 @@ label {
                     width: 100%;
                     height: 1px;
                     position: absolute;
-                    left: 50%;
+                    left: 0;
                     bottom: -1px;
                     transition: all .3s ease-in-out;
-                    transform: translateX(-50%);
+                    z-index: 1;
                 }
                 &.on {
                     .btn-tab {
@@ -75,6 +75,11 @@ label {
                         background-color: #181818;
                     }
                 }
+                // &:last-child.on {
+                //     &::after {
+                //         left: 100%;
+                //     }
+                // }
             }
             .btn-tab {
                 color: #888;
@@ -132,6 +137,9 @@ label {
                 background-color: variables.$text-darkbrown;
                 color: #fff;
             }
+            &.hide {
+                display: none;
+            }
         }
     }
 }
@@ -150,7 +158,7 @@ label {
             }
             p {
                 font-size: 18px;
-                padding: 0 22rem;
+                padding: 0 5rem;
             }
         }
         .page-contents {
