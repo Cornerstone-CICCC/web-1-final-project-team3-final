@@ -14,7 +14,7 @@ label {
     .page-header {
         padding: 46px 0 40px;
         h2 {
-            font-family: "Baskervville", serif;
+            font-family: variables.$primary-font, serif;
             font-size: 40px;
             line-height: 40px;
             text-transform: uppercase;
@@ -75,11 +75,6 @@ label {
                         background-color: #181818;
                     }
                 }
-                // &:last-child.on {
-                //     &::after {
-                //         left: 100%;
-                //     }
-                // }
             }
             .btn-tab {
                 color: #888;
