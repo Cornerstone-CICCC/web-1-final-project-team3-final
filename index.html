@@ -103,20 +103,47 @@
     </header>
     
     <!--Main Content-->
-    <main class="container-fluid">
-        <section>
-            <!--Makeup and Hairstyle-->
-            <img class="img-fluid" src="img/professional-mk.png" alt="makeup">
-        </section>
-
-        <section>
-            <!--Testimonials-->
-            <div class="testimonialss">
-
-            </div>
-
+    <main>
+        <!--Professional Makeup-->
+        <section class="container-fluid">
+            <div class="professional-mk">
+                <img class="img-fluid" src="img/professional-mk.png" alt="professional makeup">
             </div>
         </section>
+
+        <!--Testimonials-->
+        <section class="container-fluid">
+            <div class="testimonials">
+                <img class="img-fluid" src="img/testimonials-title.png" alt="testimonials-title">
+                <button class="testimonials-btn">
+                    <img src="img/my-work-btn.png" alt="my work btn">
+                </button>
+                <div class="testimonial-photos">
+                    <img id="photos" class="img-fluid" src="img/testimonials-photos.png" alt="testimonial photos models">
+                </div>
+
+                <!--Slides-->
+                <div id="carousel" class="carousel slide">
+                    <div class="carousel-indicators">
+                      <button type="button" data-bs-target="#carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                      <button type="button" data-bs-target="#carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                      <button type="button" data-bs-target="#carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <img src="img/testimonials.png" class="d-block w-100" alt="testimonial">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="img/testimonials.png" class="d-block w-100" alt="testimonial">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="img/testimonials.png" class="d-block w-100" alt="testimonial">
+                      </div>
+                    </div>
+                  </div>
+            </div>
+        </section>
+        
     </main>
 
     <footer>

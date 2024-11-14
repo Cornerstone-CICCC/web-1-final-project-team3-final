@@ -1,5 +1,54 @@
 @use 'variables.scss';
 
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: variables.$primary-color;
+}
+
+//Menu
+nav.container-fluid {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+    background-color: variables.$primary-color;
+
+    menu {
+        background-color: variables.$primary-color;
+        padding: 0 15px;
+    }
+
+    ul {
+        display: flex;
+        list-style: none;
+        padding: 32px 0;
+        gap: 50px;
+        justify-content: center;
+        width: 100%;
+
+        li.nav-item {
+            font-family: variables.$primary-font;
+            font-weight: 400;
+            font-size: 20px;
+            color: variables.$li-color;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            #menu-line {
+                color: variables.$menu-line;
+                padding-left: 40px;
+            }
+        }
+    }
+}
+
 //Header
 header.container-fluid {
     img.img-fluid {
@@ -68,20 +117,51 @@ header.container-fluid {
 }
 
 //Main
-    main.container-fluid {
-        section {
-            background-color: variables.$primary-color;
-            img.img-fluid {
-                margin-left: auto;
-                margin-right: auto;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                gap: 80px;
-                background-color: variables.$primary-color;
-            }
+    main {
+        section.container-fluid {
+                img.img-fluid {
+                    width: 100%;
+                    margin-left: auto;
+                    margin-right: auto;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
         }
 
+        section.container-fluid {
+            .testimonials {
+                background-color: variables.$testimonial-bk-color;
+                img.img-fluid {
+                    width: 50%;
+                    padding-top: 100px;
+                }
+
+                button.testimonials-btn {
+                    position: relative;
+                    top: 50px;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    background-color: transparent;
+                    font-size: 20px;
+                    border: none;
+                }
+
+                img#photos {
+                    width: 100%;
+                }
+
+                #carousel {
+                    padding-top: 50px;
+
+                    .carousel-indicators {
+                        button {
+                            background-color: transparent;
+                        }
+                    }
+                }
+            }
+        }
     }
 
 
