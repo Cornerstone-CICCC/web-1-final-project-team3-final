@@ -5,12 +5,12 @@
     text-align: center;
     color: variables.$line-pink;
     font-size: 3rem;
+}
 
-    &.site_name {
-        font-size: 5rem;
-        color: variables.$text-darkbrown;
-        margin: 2rem;
-    }
+.site_name {
+    font-size: 5rem;
+    color: variables.$text-darkbrown;
+    margin: 2rem;
 }
 
 .founder_profile {
@@ -93,6 +93,7 @@
 
     .site_name {
         font-size: 2.0625rem;
+        letter-spacing: 0.65rem;
     }
 
     .founder_profile {
