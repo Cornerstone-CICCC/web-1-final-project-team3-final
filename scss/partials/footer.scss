@@ -1,22 +1,42 @@
 @use 'variables.scss';
 
-footer {
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    color: variables.$text-darkbrown;
+@import url('https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 
+/* using footer and hamburger menu both */
+.menu-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    i {
+        display: block;
+        width: 1.5rem;
+        height: 1.5rem;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    .phone {
+        background-image: url(./../../img/phone.svg);
+    }
+    .whatsapp {
+        background-image: url(./../../img/whatsapp.svg);
+    }
+    .instagram {
+        background-image: url(./../../img/instagram.svg);
+    }
+}
+
+footer {
+    padding-top: 1.875rem;
+    color: variables.$text-darkbrown;
+    background-color: variables.$primary-color;
 
     .footer_content {
+        max-width: 1440px;
+        margin: 0 auto;
         text-align: center;
 
         .logo {
-            .logo_img {
-                width: 5rem;
-            }
-
-            font-size: 1.2rem;
-
             div {
                 color: variables.$text-black;
                 font-size: 1.5rem;
@@ -24,67 +44,65 @@ footer {
         }
 
         .subtitle {
-            margin: 1.5rem 0 0 0;
+            margin: 1rem 0;
             font-size: .875rem;
-        }
-
-        .icons {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-            img {
-                margin: 1rem 1rem;
-            }
+            font-family: "Nunito", sans-serif;
+            font-weight: 300;
         }
 
         .footer_menu {
-            display: flex;
-            justify-content: space-around;
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
             align-items: center;
-            padding: 1.625rem;
-            margin: 0 3rem;
+            padding: 1.375rem 1.625rem;
+            margin: 1.5rem 3rem 0;
             border-top: .0625rem solid variables.$text-black;
             border-bottom: .0625rem solid variables.$text-black;
 
             a {
                 color: inherit;
                 text-decoration: none;
-            }
-
-            .underline {
-                text-decoration: underline;
-            }
-
-            .dummy {
-                display: none;
+                font-size: 1.25rem;
+                &:hover {
+                    text-decoration: underline;
+                    text-decoration-thickness: 1px;
+                    text-underline-offset: 2px;
+                }
             }
         }
 
         .copy-right {
+            font-size: .875rem;
             padding: 2rem;
-            font-family: variables.$copyright-font;
+            font-family: "Nunito", sans-serif;
+            font-weight: 100;
+        }
+
+        @media (max-width: 1000px) {
+            .footer_menu {
+                grid-template-columns: repeat(4, 1fr);
+                a {
+                    padding: .5rem 0;
+                }
+            }
         }
 
         @media (max-width: 768px) {
-            .logo {
-                .logo_img {
-                    width: 4rem;
+            .footer_menu {
+                grid-template-columns: repeat(2, 1fr);
+                padding-top: .3125rem;
+                padding-bottom: .3125rem;
+                margin-left: 1rem;
+                margin-right: 1rem;
+                a {
+                    font-size: 1.25rem;
                 }
             }
 
-            .footer_menu {
-                flex-wrap: wrap;
-
-                a {
-                    width: 50%;
-                    text-align: center;
-                }
-
-                .dummy {
-                    display: block;
-                }
+            .copy-right {
+                font-size: .875rem;
             }
         }
     }
 }
+
