@@ -28,7 +28,7 @@
 
 .services_list {
     background-color: variables.$background-light-pink;
-    padding: 5rem 13rem;
+    padding: 5rem 0;
 }
 
 .service_main {
@@ -47,7 +47,6 @@
 
     .service_image {
         width: 20rem;
-        height: 23.75rem;
         background-color: variables.$background-light-pink;
     }
 }
@@ -169,7 +168,7 @@
 
         .service_image {
             width: 100%;
-            object-fit: cover;
+            object-fit: contain;
         }
     }
 
