@@ -31,14 +31,14 @@
         align-items: center;
         padding: 44px 20px 90px;
         .form-box {
-            background-color: #FAE9E7;
+            background-color: variables.$testimonial-bk-color;
             max-width: 768px;
             width: 100%;
             padding: 60px 80px;
         }
         h3 {
             font-size: 32px;
-            border-bottom: 1px solid #191919;
+            border-bottom: 1px solid variables.$text-black;
             margin-bottom: 60px;
         }
     }
@@ -54,7 +54,7 @@
         select {
             font-family: "Nunito";
             font-weight: 100;
-            color: #535353;
+            color: variables.$text-black;;
             vertical-align: middle;
         }
         input[type="text"],
@@ -128,7 +128,7 @@
                     accent-color: #B99692;
                     color-scheme: dark;
                 }
-                input[name="event-contact"] {
+                input[name="event_contact"] {
                     appearance: none;
                     position: relative;
                     &::before {
@@ -141,6 +141,7 @@
                         left: 0;
                         border: 1px solid #B99692;
                         border-radius: 50%;
+                        background-color: #fff;
                     }
                     &:checked::after {
                         content: "";
@@ -157,6 +158,9 @@
             }
         }
         .form-row {
+            input[type="date"]:disabled {
+                opacity: .8;
+            }
             &.type {
                 display: grid;
                 grid-template-columns: repeat(3, 1fr);
