@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="./css/style.css">
+
+    <!-- emailJS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init({
+                publicKey: "IFfWotEgis7HO_pGL",
+            });
+        })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function() {
+            document.getElementById('service-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                // these IDs from the previous steps
+                console.log(this)
+                emailjs.sendForm('service_39j3rxe', 'template_qdd65ai', this)
+                    .then(() => {
+                        console.log('SUCCESS!');
+                        this.reset();
+                    }, (error) => {
+                        console.log('FAILED...', error);
+                    });
+            });
+        }
+    </script>
+    <!-- //emailJS -->
+</head>
+<body>
+    <!-- header -->
+    <header>
+        <div class='menus'>
+            <div class="mobile-elements">
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class='mobile-logo'>
+                    <img src="./img/logo.svg" alt="Carla Beauty" class='logo_img'>
+                </div>
+                <a href='#' class="menu-instagram">
+                    <i></i>
+                    <span class="a11y-hidden">Instagram</span>
+                </a>
+            </div>
+
+            <div class='hamburger_menu'>
+                <a href='/'>Home</a>
+                <a href='./portfolio.html'>My Work</a>
+                <a href='./services.html'>Services</a>
+                <a href='#'>Classes</a>
+                <a href='#'>Beauty Tips</a>
+                <a href='./about.html'>About</a>
+                <a href='#'>Contact</a>
+                <div class='menu-icons'>
+                    <a href="#" class="phone">
+                        <i></i>
+                        <span class="a11y-hidden">phone</span>
+                    </a>
+                    <a href="#" class="whatsapp">
+                        <i></i>
+                        <span class="a11y-hidden">whatsapp</span>
+                    </a>
+                    <a href="#" class="instagram">
+                        <i></i>
+                        <span class="a11y-hidden">phone</span>
+                    </a>
+                </div>
+                <div class='subtitle'>
+                    Expert makeup and hairstyle studio
+                </div>
+            </div>
+
+            <div class='menu'>
+                <a href='/'>Home</a>
+                <a href='./portfolio.html'>My Work</a>
+                <a href='./services.html'>Services</a>
+                <a href='#'>Classes</a>
+            </div>
+            <div class='logo'>
+                <img src="./img/logo.svg" alt="Carla Beauty" class='logo_img'>
+            </div>
+            <div class='menu'>
+                <a href='#'>Beauty Tips</a>
+                <a href='./about.html'>About</a>
+                <a href='#'>Contact</a>
+                <a href='#' class="menu-instagram">
+                    <i></i>
+                    <span class="a11y-hidden">Instagram</span>
+                </a>
+            </div>
+        </div>
+    </header>
+    <!-- //header -->
+    <main>
+        <div class="talk">
+            <div class="page-header">
+                <h2>Let's Talk</h2>
+                <p>Check availability, pricing, and schedule a meeting for your special day or our academy services.</p>
+            </div>
+            <div class="page-contents">
+                <div class="form-box">
+                    <h3>Service</h3>
+                    <form action="/" id="service-form">
+                        <div class="form">
+                            <h4>Event Type</h4>
+                            <div class="form-row type">
+                                <label for="event-type1">
+                                    <input type="radio" name="event-type" id="event-type1" checked value="Wedding">
+                                    <span class="label">Wedding</span>
+                                    <span class="marker"></span>
+                                </label>
+                                <label for="event-type2">
+                                    <input type="radio" name="event-type" id="event-type2" value="Party">
+                                    <span class="label">Party</span>
+                                    <span class="marker"></span>
+                                </label>
+                                <label for="event-type3">
+                                    <input type="radio" name="event-type" id="event-type3" value="Photoshoot">
+                                    <span class="label">Photoshoot</span>
+                                    <span class="marker"></span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form form-columns">
+                            <div class="form-column">
+                                <h4>Event Date</h4>
+                                <div class="form-row">
+                                    <label for="event-date">
+                                        <input type="date" name="event-date" id="event-date">
+                                    </label>
+                                    <div class="form-option">
+                                        <label for="not-decide1">
+                                            <input type="checkbox" name="" id="not-decide1" value="Not decided">
+                                            <span class="label">Not decided</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-colum">
+                                <h4>Event Time</h4>
+                                <select name="event-time">
+                                    <option value="8">Full day</option>
+                                    <option value="4">Half day</option>
+                                    <option value="2">2 hours</option>
+                                </select>
+                                <div class="form-option">
+                                    <label for="not-decide2">
+                                        <input type="checkbox" name="" id="not-decide2" value="Not decided">
+                                        <span class="label">Not decided</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form">
+                            <h4>Name</h4>
+                            <div class="form-row">
+                                <input type="text" placeholder="Your name" name="event-name" required>
+                            </div>
+                        </div>
+                        <div class="form contact">
+                            <h4>Contact</h4>
+                            <div class="form-row">
+                                <input type="radio" name="event-contact" id="contact1" checked>
+                                <label for="contact1">Call</label>
+                                <div class="contact-item set">
+                                    <select name="event-contact-phone">
+                                        <option value="1">+1</option>
+                                        <option value="2">+2</option>
+                                        <option value="3">+3</option>
+                                        <option value="4">+4</option>
+                                        <option value="5">+5</option>
+                                    </select>
+                                    <input type="text" name="event-contact-phone" placeholder="Your mobile number">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <input type="radio" name="event-contact" id="contact2">
+                                <label for="contact2">WhatsApp</label>
+                                <div class="contact-item">
+                                    <input type="text" name="event-contact-msg">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <input type="radio" name="event-contact" id="contact3">
+                                <label for="contact3">SMS</label>
+                                <div class="contact-item set">
+                                    <select name="event-contact-phone">
+                                        <option value="1">+1</option>
+                                        <option value="2">+2</option>
+                                        <option value="3">+3</option>
+                                        <option value="4">+4</option>
+                                        <option value="5">+5</option>
+                                    </select>
+                                    <input type="text" name="event-contact-sms" placeholder="Your mobile number">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <input type="radio" name="event-contact" id="contact4">
+                                <label for="contact4">Email</label>
+                                <div class="contact-item">
+                                    <input type="email" name="event-contact-email">
+                                </div>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn-submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- footer -->
+    <footer>
+        <div class='footer_content'>
+            <div class='logo'>
+                <img src="./img/logo.svg" alt="" class='logo_img' title="Carla Beauty">
+            </div>
+            <div class='subtitle'>
+                Expert makeup and hairstyle studio
+            </div>
+            <div class='menu-icons'>
+                <a href="#" class="phone">
+                    <i></i>
+                    <span class="a11y-hidden">phone</span>
+                </a>
+                <a href="#" class="whatsapp">
+                    <i></i>
+                    <span class="a11y-hidden">whatsapp</span>
+                </a>
+                <a href="#" class="instagram">
+                    <i></i>
+                    <span class="a11y-hidden">phone</span>
+                </a>
+            </div>
+            <div class='footer_menu'>
+                <a href='/'>Home</a>
+                <a href='./portfolio.html'>My Work</a>
+                <a href='./services.html'>Services</a>
+                <a href='#'>Classes</a>
+                <a href='#'>Beauty Tips</a>
+                <a href='./about.html'>About</a>
+                <a href='#'>Contact</a>
+            </div>
+            <div class='copy-right'>
+                Copyright 2024, Carla Beauty
+            </div>
+        </div>
+    </footer>
+    <!-- //footer -->
+
+    <!-- message box -->
+    <div class="message-box-btns">
+        <button class="msgbox-open">
+            <i></i>
+            <span class="a11y-hidden">open</span>
+        </button>
+        <div class="msgbox">
+            <button class="msgbox-instagram">
+                <i></i>
+                <span class="a11y-hidden">instagram</span>
+            </button>
+            <button class="msgbox-call">
+                <i></i>
+                <span class="a11y-hidden">call</span>
+            </button>
+            <button class="msgbox-messenger">
+                <i></i>
+                <span class="a11y-hidden">messenger</span>
+            </button>
+            <button class="msgbox-close">
+                <i></i>
+                <span class="a11y-hidden">close</span>
+            </button>
+        </div>
+    </div>
+    <!-- //message box -->
+
+    <script src="./js/msgbox.js"></script>
+    <script src="./js/header.js"></script>
+</body>
+</html>
