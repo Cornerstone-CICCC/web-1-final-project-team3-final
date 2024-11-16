@@ -1,0 +1,276 @@
+@use "variables";
+
+.talk {
+    text-align: center;
+    margin-bottom: 30px;
+    .page-header {
+        padding: 46px 0 40px;
+        h2 {
+            font-family: "Baskervville", serif;
+            font-size: 40px;
+            line-height: 40px;
+            text-transform: uppercase;
+            color: variables.$text-darkbrown;
+            position: relative;
+            padding-bottom: 28px;
+            margin-bottom: 28px;
+            font-weight: 400;
+            letter-spacing: 13px;
+        }
+        p {
+            font-size: 16px;
+            font-family: "Nunito", sans-serif;
+            padding: 0 2rem;
+            font-weight: 200;
+            line-height: 24px;
+        }
+    }
+    .page-contents {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 44px 20px 90px;
+        .form-box {
+            background-color: #FAE9E7;
+            max-width: 768px;
+            width: 100%;
+            padding: 60px 80px;
+        }
+        h3 {
+            font-size: 32px;
+            border-bottom: 1px solid #191919;
+            margin-bottom: 60px;
+        }
+    }
+    #service-form {
+        text-align: left;
+        h4 {
+        font-size: 32px;
+        margin-bottom: 16px;
+        }
+        input,
+        label,
+        label span,
+        select {
+            font-family: "Nunito";
+            font-weight: 100;
+            color: #535353;
+            vertical-align: middle;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="date"],
+        select {
+            border: 1px solid #B99692;
+            padding: 12px;
+            font-size: 18px;
+            width: 100%;
+        }
+        select {
+            appearance: none;
+        }
+        input[type="date"]::-webkit-calendar-picker-indicator {
+            color: rgba(0, 0, 0, 0);
+            opacity: 0;
+        }
+        input[type="date"] {
+            padding: 11px 12px;
+            background: #fff url(./../../img/form/icon-calendar.svg) no-repeat right 12px center;
+        }
+        select {
+            padding-right: 50px;
+            background: #fff url(./../../img/form/icon-arrow_down.svg) no-repeat right 12px center;
+        }
+
+        .form {
+            margin-top: 40px;
+            &.form-columns {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 24px;
+            }
+            &.contact {
+                font-size: 18px;
+                label {
+                    padding-left: 8px;
+                }
+                .form-row + .form-row {
+                    margin-top: 16px;
+                }
+                .contact-item {
+                    display: none;
+                    margin-top: 12px;
+                    &.set {
+                        input,
+                        select {
+                            border: 0;
+                        }
+                        border: 1px solid #B99692;
+                        select {
+                            padding-left: 50px;
+                            padding-right: 0;
+                            background: #fff url(./../../img/form/icon-arrow_down.svg) no-repeat left 12px center;
+                        }
+                    }
+                }
+                input[type="radio"] {
+                    width: 20px;
+                    height: 20px;
+                }
+                input[type="radio"]:checked ~ .contact-item {
+                    display: block;
+                    &.set {
+                        display: grid;
+                        grid-template-columns: 100px 1fr;
+                    }
+                }
+                input[type="radio"]:checked {
+                    accent-color: #B99692;
+                    color-scheme: dark;
+                }
+                input[name="event-contact"] {
+                    appearance: none;
+                    position: relative;
+                    &::before {
+                        content: "";
+                        display: block;
+                        width: 20px;
+                        height: 20px;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        border: 1px solid #B99692;
+                        border-radius: 50%;
+                    }
+                    &:checked::after {
+                        content: "";
+                        display: block;
+                        width: 14px;
+                        height: 14px;
+                        position: absolute;
+                        top: 4px;
+                        left: 4px;
+                        background-color: #B99692;
+                        border-radius: 50%;
+                    }
+                }
+            }
+        }
+        .form-row {
+            &.type {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 8px;
+                label {
+                    display: flex;
+                    justify-content: space-between;
+                    position: relative;
+                    .label {
+                        font-size: 20px;
+                        font-family: variables.$primary-font;
+                        width: 100%;
+                        background-color: #fff;
+                        padding: 10px;
+                        border: 1px solid #fff;
+                    }
+                }
+                input {
+                    position: absolute;
+                    opacity: 0;
+                    cursor: pointer;
+                    height: 0;
+                    width: 0;
+                    &:checked ~ .label {
+                        border-color: #b99692;
+                    }
+                    &:checked ~ .marker {
+                        display: inline-block;
+                    }
+                }
+                .marker {
+                    display: none;
+                    position: absolute;
+                    right: 10px;
+                    top: 12px;
+                    width: 24px;
+                    height: 24px;
+                    border-radius: 50%;
+                    background-image: url(./../../img/form/icon-check_circle.svg);
+                }
+            }
+        }
+        .form-option {
+            margin-top: 12px;
+            label {
+                position: relative;
+                padding-left: 30px;
+                input[type="checkbox"] {
+                    appearance: none;
+                    &::after {
+                        content: "";
+                        width: 21px;
+                        height: 21px;
+                        display: block;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        border: 1px solid #B99692;
+                        background-color: #fff;
+                        transition: all .2s ease-in-out;
+                    }
+                    &:checked::after {
+                        // content: "";
+                        // width: 22px;
+                        // height: 22px;
+                        // display: block;
+                        // position: absolute;
+                        // top: 0;
+                        // left: 0;
+                        border: 0;
+                        background: url(./../../img/form/icon-check_square.svg) no-repeat;
+                    }
+                }
+            }
+        }
+    }
+    .btn-submit {
+        display: block;
+        margin: 40px auto 0;
+        border: 1px solid variables.$text-darkbrown;
+        color: variables.$text-darkbrown;
+        padding: 15px 32px;
+        background-color: transparent;
+        font-size: 20px;
+        transition: all .3s ease-in-out;
+        &:hover {
+            background-color: variables.$text-darkbrown;
+            color: #fff;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .talk {
+        .page-contents {
+            padding-left: 0;
+            padding-right: 0;
+            .form-box {
+                padding-left: 16px;
+                padding-right: 16px;
+            }
+        }
+        #service-form {
+
+            .form {
+                &.form-columns {
+                    grid-template-columns: repeat(1, 1fr);
+                }
+            }
+            .form-row {
+                &.type {
+                    grid-template-columns: repeat(1, 1fr);
+                }
+            }
+        }
+    }
+}
