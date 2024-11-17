@@ -28,10 +28,12 @@
 
     .profile_image {
         background-color: inherit;
+        width: 21.9375rem;
     }
 
     .profile_text {
         padding: 2rem;
+        max-width: 48.6875rem;
         background-color: transparent;
 
         .profile_greeting {
@@ -105,7 +107,11 @@
             flex-direction: column;
         }
 
-        .profile_image .founder_image {
+        .profile_image {
+            .founder_image {
+                width: 100%;
+            }
+
             width: 100%;
         }
 
