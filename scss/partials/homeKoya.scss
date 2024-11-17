@@ -1,0 +1,385 @@
+@use 'variables.scss';
+
+.home_hairstyle_title {
+    font-size: 5rem;
+    text-align: center;
+    color: variables.$text-darkbrown;
+    letter-spacing: 0.65rem;
+}
+
+.separator {
+    width: 12.5rem;
+    margin: 2rem auto;
+    border-bottom: 2px solid variables.$line-pink;
+}
+
+.home_hairstyle_description {
+    font-size: 1.125rem;
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.home_hairstyle_button {
+    display: block;
+    border: 1px solid variables.$text-darkbrown;
+    padding: 1rem 1.5rem;
+    margin: .75rem 40%;
+    font-size: 1.25rem;
+    background-color: variables.$testimonial-bk-color;
+    text-align: center;
+
+    &:hover {
+        background-color: variables.$text-darkbrown;
+        color: variables.$testimonial-bk-color;
+    }
+}
+
+.home_hairstyle_images {
+    display: flex;
+    justify-content: center;
+    margin: 8rem 8rem;
+
+    .image-container {
+        position: relative;
+        margin: 1rem 4rem;
+
+        img {
+            max-width: 18.625rem;
+            transition: transform 0.3s ease-in-out;
+
+            &:hover {
+                transform: scale(1.2);
+
+                +.hairstyle_image_title {
+                    transform: scale(1.2);
+                }
+
+                ~.hairstyle_box {
+                    z-index: -1;
+                    transform: scale(1.2);
+                }
+            }
+        }
+
+        .hairstyle_image_title {
+            position: absolute;
+            top: 65%;
+            left: -16%;
+            color: variables.$menu-line;
+            font-size: 4rem;
+            transition: transform 0.3s ease-in-out;
+
+            &::first-letter {
+                color: variables.$dark-pink;
+            }
+        }
+
+        .hairstyle_box {
+            position: absolute;
+            z-index: -1;
+            top: -10%;
+            left: 10%;
+            margin: auto;
+            width: 18.625rem;
+            height: 24rem;
+            background: transparent;
+            border: 1px solid variables.$line-pink;
+            transition: transform 0.3s ease-in-out;
+            transform: scale(0);
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .home_hairstyle_title {
+        font-size: 2.5rem;
+    }
+
+    .home_hairstyle_button {
+        font-size: 1.125rem;
+        margin: .75rem 30%;
+    }
+
+    .home_hairstyle_images {
+        margin: 0;
+        display: block;
+        text-align: center;
+
+        .image-container {
+            .hairstyle_image_title {
+                top: 90%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                color: variables.$primary-color;
+                font-size: 3.125rem;
+                transition: transform 0.3s ease-in-out;
+
+                &::first-letter {
+                    color: variables.$primary-color;
+                }
+            }
+        }
+    }
+}
+
+.home_makeup {
+    background-color: variables.$testimonial-bk-color;
+    padding: 2rem;
+    margin: 2rem 8rem;
+
+    .home_makeup_title {
+        font-size: 5rem;
+        text-align: center;
+        color: variables.$text-darkbrown;
+        letter-spacing: 0.65rem;
+        background-color: transparent;
+        margin: 5rem;
+    }
+
+    .home_makeup_content {
+        display: flex;
+        justify-content: center;
+        background-color: transparent;
+        margin: 1rem 4rem;
+
+        .cards {
+            .card {
+                display: flex;
+                max-width: 34rem;
+                margin-right: 4rem;
+                padding: 1rem;
+
+                .card_left {
+
+                    .card_title {
+                        display: flex;
+                        align-items: center;
+                        font-size: 2rem;
+                        font-family: variables.$primary-font;
+                        color: variables.$text-darkbrown;
+                        margin: 1rem 0 .5rem 0;
+
+                    }
+
+                    .card_description {
+                        font-size: 1.125rem;
+                        padding: 1rem 0;
+                        max-width: 30rem;
+                        font-family: variables.$text-black;
+                    }
+                }
+
+                .view_class_button {
+                    .view_class {
+                        display: none;
+                    }
+
+                    .vector {
+                        margin: 2rem 2rem;
+                    }
+                }
+
+                &:hover {
+                    background-color: variables.$menu-line;
+                }
+            }
+        }
+
+        .makeup_image {
+            max-width: 25.4375rem;
+        }
+
+        .home_makeup_button {
+            display: inline-block;
+            border: 1px solid variables.$text-darkbrown;
+            padding: 1rem 1.5rem;
+            margin: .75rem 0;
+            font-size: 1.25rem;
+            background-color: variables.$testimonial-bk-color;
+
+            &:hover {
+                background-color: variables.$dark-pink;
+                color: variables.$testimonial-bk-color;
+                border: none;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .home_makeup {
+        margin: 0;
+        padding: 0;
+
+        .home_makeup_title {
+            font-size: 2.5rem;
+            margin: 0;
+            padding: 2rem 0;
+        }
+
+        .home_makeup_content {
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+
+            .cards {
+                .card {
+                    flex-direction: column;
+                    margin: 0;
+
+                    .card_left {
+                        .card_title {
+                            flex-direction: column;
+                            text-align: center;
+                        }
+
+                        .card_description {
+                            text-align: center;
+                        }
+                    }
+
+                    .view_class_button {
+                        display: flex;
+                        justify-content: center;
+                        margin: 1rem 0;
+
+                        .view_class {
+                            display: block;
+                            margin-right: 1rem;
+                            font-size: 1.25rem;
+                        }
+
+                        .vector {
+                            margin: 0;
+                        }
+                    }
+                }
+            }
+
+            .home_makeup_button {
+                margin: .75rem 30%;
+            }
+
+            .makeup_image {
+                max-width: none;
+                width: 100%;
+            }
+        }
+    }
+}
+
+.home_diy_beauty {
+    margin-top: 4rem;
+
+    .home_diy_beauty_separator {
+        display: none;
+    }
+
+    .home_diy_title {
+        font-size: 3rem;
+        text-align: center;
+        color: variables.$text-darkbrown;
+    }
+
+    .diy_beauty_corner_images {
+        display: flex;
+        justify-content: center;
+        margin: 3rem 8rem;
+        width: auto;
+        text-align: center;
+
+        img {
+            max-width: 18.625rem;
+            margin: 1rem 2rem;
+            transition: filter 0.3s ease-in-out;
+
+            &:hover {
+                filter: brightness(0.5);
+            }
+        }
+    }
+}
+
+.diy_beauty_button {
+    display: inline-block;
+    border: 1px solid variables.$text-darkbrown;
+    padding: 1rem 1.5rem;
+    margin: .75rem 45%;
+    font-size: 1.25rem;
+    background-color: variables.$primary-color;
+    text-align: center;
+
+    &:hover {
+        background-color: variables.$dark-pink;
+        color: variables.$testimonial-bk-color;
+        border: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .home_diy_beauty {
+        .diy_beauty_corner_images {
+            display: none;
+        }
+    }
+}
+
+.slide-wrap {
+    display: flex;
+    justify-content: center;
+    margin: 3rem 29%;
+    gap: 1rem;
+}
+
+.slide-box {
+    margin: .5%;
+}
+
+.slide-box img {
+    display: block;
+    max-width: 18.625rem;
+    transition: filter 0.3s ease-in-out;
+
+    &:hover {
+        filter: brightness(0.5);
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .home_diy_beauty {
+        .home_diy_beauty_separator {
+            display: block;
+            width: 12.5rem;
+            margin: 2rem auto;
+            border-bottom: 2px solid variables.$line-pink;
+        }
+
+        .home_diy_title {
+            font-size: 2rem;
+        }
+
+        .diy_beauty_button {
+            margin: 2rem 25%;
+            padding: 1rem 1rem;
+        }
+    }
+
+    .slide-wrap {
+        display: flex;
+        justify-content: unset;
+        margin: 0;
+        overflow-x: scroll;
+    }
+
+    .slide-box {
+        flex: 0 0 100%;
+        max-width: 68%;
+        justify-items: center;
+        margin: 0 4rem;
+
+        img {
+            max-width: 25rem;
+        }
+    }
+}
