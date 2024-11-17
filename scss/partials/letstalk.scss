@@ -3,12 +3,13 @@
 .talk {
     text-align: center;
     margin-bottom: 30px;
+    padding-top: 80px;
     .page-header {
         padding: 46px 0 40px;
         h2 {
             font-family: "Baskervville", serif;
-            font-size: 40px;
-            line-height: 40px;
+            font-size: 80px;
+            line-height: 80px;
             text-transform: uppercase;
             color: variables.$text-darkbrown;
             position: relative;
@@ -89,6 +90,9 @@
                 display: grid;
                 grid-template-columns: repeat(2, 1fr);
                 gap: 24px;
+                label {
+                    width: 100%;
+                }
             }
             &.contact {
                 font-size: 18px;
@@ -150,8 +154,8 @@
                         width: 14px;
                         height: 14px;
                         position: absolute;
-                        top: 4px;
-                        left: 4px;
+                        top: 3px;
+                        left: 3px;
                         background-color: #B99692;
                         border-radius: 50%;
                     }
@@ -224,13 +228,6 @@
                         transition: all .2s ease-in-out;
                     }
                     &:checked::after {
-                        // content: "";
-                        // width: 22px;
-                        // height: 22px;
-                        // display: block;
-                        // position: absolute;
-                        // top: 0;
-                        // left: 0;
                         border: 0;
                         background: url(./../../img/form/icon-check_square.svg) no-repeat;
                     }
@@ -256,9 +253,15 @@
 
 @media (max-width: 768px) {
     .talk {
+        margin-bottom: 0;
+        .page-header {
+            h2 {
+                font-size: 40px;
+                line-height: 40px;
+            }
+        }
         .page-contents {
-            padding-left: 0;
-            padding-right: 0;
+            padding: 0;
             .form-box {
                 padding-left: 16px;
                 padding-right: 16px;
@@ -276,6 +279,9 @@
                     grid-template-columns: repeat(1, 1fr);
                 }
             }
+        }
+        .btn-submit {
+            width: 100%;
         }
     }
 }
