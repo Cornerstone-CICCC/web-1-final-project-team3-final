@@ -1,8 +1,6 @@
 @use "variables";
 @use "reset";
 
-@import url('https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
-
 button,
 label {
     cursor: pointer;
@@ -42,7 +40,7 @@ label {
 
         p {
             font-size: 16px;
-            font-family: "Nunito", sans-serif;
+            font-family: variables.$secondary-font;
             padding: 0 2rem;
             font-weight: 200;
             line-height: 28px;
@@ -96,7 +94,7 @@ label {
                 appearance: none;
                 background-color: transparent;
                 position: relative;
-                font-family: "Baskervville", serif;
+                font-family: variables.$primary-font;
                 transition: all .3s ease-in-out;
             }
         }

@@ -1,7 +1,5 @@
 @use 'variables.scss';
 
-@import url('https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
-
 /* using footer and hamburger menu both */
 .menu-icons {
     display: flex;
@@ -50,7 +48,7 @@ footer {
         .subtitle {
             margin: 1rem 0;
             font-size: .875rem;
-            font-family: "Nunito", sans-serif;
+            font-family: variables.$secondary-font;
             font-weight: 300;
         }
 
@@ -79,7 +77,7 @@ footer {
         .copy-right {
             font-size: .875rem;
             padding: 2rem;
-            font-family: "Nunito", sans-serif;
+            font-family: variables.$secondary-font;
             font-weight: 100;
         }
 

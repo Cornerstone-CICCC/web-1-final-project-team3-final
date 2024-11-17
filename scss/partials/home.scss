@@ -10,7 +10,7 @@ body {
 
 //Header
 header {
-    font-family: "Baskervville", serif;
+    font-family: variables.$primary-font;
 
     .menu {
         display: flex;

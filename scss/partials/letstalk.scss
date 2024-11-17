@@ -9,7 +9,7 @@
         padding: 46px 0 40px;
 
         h2 {
-            font-family: "Baskervville", serif;
+            font-family: variables.$primary-font;
             font-size: 80px;
             line-height: 80px;
             text-transform: uppercase;
@@ -22,7 +22,7 @@
 
         p {
             font-size: 16px;
-            font-family: "Nunito", sans-serif;
+            font-family: variables.$secondary-font;
             padding: 0 2rem;
             font-weight: 200;
             line-height: 24px;
@@ -63,7 +63,7 @@
         label,
         label span,
         select {
-            font-family: "Nunito";
+            font-family: variables.$secondary-font;
             font-weight: 100;
             color: variables.$black;
             ;

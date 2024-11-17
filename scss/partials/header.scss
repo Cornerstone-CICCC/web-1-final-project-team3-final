@@ -1,7 +1,5 @@
 @use 'variables.scss';
 
-@import url('https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
-
 header {
     background-color: variables.$primary-color;
 
@@ -128,7 +126,7 @@ header {
             }
 
             .subtitle {
-                font-family: "Nunito", sans-serif;
+                font-family: variables.$secondary-font;
                 font-size: 14px;
                 font-weight: 300;
             }
