@@ -9,53 +9,65 @@
 <body>
     <!-- header -->
     <header>
-        <div class='menu'>
+        <div class='menus'>
             <div class="mobile-elements">
                 <div class="hamburger">
                     <span></span>
                     <span></span>
                     <span></span>
                 </div>
-
                 <div class='mobile-logo'>
-                    <img src="./img/logo.png" alt="" class='logo_img'>
-                    <div>
-                        Carla Beauty
-                    </div>
+                    <img src="./img/logo.svg" alt="Carla Beauty" class='logo_img'>
                 </div>
-                <div class="mobile-instagram">
-                    <img src="./img/instagram.svg" alt="Instagram">
-                </div>
+                <a href='#' class="menu-instagram">
+                    <i></i>
+                    <span class="a11y-hidden">Instagram</span>
+                </a>
             </div>
 
             <div class='hamburger_menu'>
-                <a href='#'>Home</a>
-                <a href='#'>My Work</a>
-                <a href='#'>Services</a>
+                <a href='/'>Home</a>
+                <a href='./portfolio.html'>My Work</a>
+                <a href='./services.html'>Services</a>
                 <a href='#'>Classes</a>
                 <a href='#'>Beauty Tips</a>
-                <a href='#'>About</a>
+                <a href='./about.html'>About</a>
                 <a href='#'>Contact</a>
+                <div class='menu-icons'>
+                    <a href="#" class="phone">
+                        <i></i>
+                        <span class="a11y-hidden">phone</span>
+                    </a>
+                    <a href="#" class="whatsapp">
+                        <i></i>
+                        <span class="a11y-hidden">whatsapp</span>
+                    </a>
+                    <a href="#" class="instagram">
+                        <i></i>
+                        <span class="a11y-hidden">phone</span>
+                    </a>
+                </div>
+                <div class='subtitle'>
+                    Expert makeup and hairstyle studio
+                </div>
             </div>
 
-            <div class='menu1'>
-                <a class='underline'>Home</a>
-                <a href='#'>My Work</a>
-                <a href='#'>Services</a>
+            <div class='menu'>
+                <a href='/'>Home</a>
+                <a href='./portfolio.html'>My Work</a>
+                <a href='./services.html'>Services</a>
                 <a href='#'>Classes</a>
             </div>
             <div class='logo'>
-                <img src="./img/logo.png" alt="" class='logo_img'>
-                <div>
-                    Carla Beauty
-                </div>
+                <img src="./img/logo.svg" alt="Carla Beauty" class='logo_img'>
             </div>
-            <div class='menu2'>
+            <div class='menu'>
                 <a href='#'>Beauty Tips</a>
-                <a href='#'>About</a>
+                <a href='./about.html'>About</a>
                 <a href='#'>Contact</a>
-                <a href='#'>
-                    <img src="./img/instagram.svg" alt="">
+                <a href='#' class="menu-instagram">
+                    <i></i>
+                    <span class="a11y-hidden">Instagram</span>
                 </a>
             </div>
         </div>
@@ -212,34 +224,33 @@
     <footer>
         <div class='footer_content'>
             <div class='logo'>
-                <img src="./img/logo.png" alt="" class='logo_img'>
-                <div>
-                    Carla Beauty
-                </div>
+                <img src="./img/logo.svg" alt="" class='logo_img' title="Carla Beauty">
             </div>
             <div class='subtitle'>
                 Expert makeup and hairstyle studio
             </div>
-            <div class='icons'>
-                <img src="./img/phone.svg" alt="">
-                <img src="./img/whatsapp.svg" alt="">
-                <img src="./img/instagram.svg" alt="">
+            <div class='menu-icons'>
+                <a href="#" class="phone">
+                    <i></i>
+                    <span class="a11y-hidden">phone</span>
+                </a>
+                <a href="#" class="whatsapp">
+                    <i></i>
+                    <span class="a11y-hidden">whatsapp</span>
+                </a>
+                <a href="#" class="instagram">
+                    <i></i>
+                    <span class="a11y-hidden">phone</span>
+                </a>
             </div>
             <div class='footer_menu'>
-                <a href='#' class='underline'>Home</a>
-                <a href='#'>My Work</a>
-                <a href='#'>Services</a>
+                <a href='/'>Home</a>
+                <a href='./portfolio.html'>My Work</a>
+                <a href='./services.html'>Services</a>
                 <a href='#'>Classes</a>
-                <a href='#'>
-                    Beauty Tips
-                </a>
-                <a href='#'>
-                    About
-                </a>
-                <a href='#'>
-                    Contact
-                </a>
-                <a href='#' class='dummy'></a>
+                <a href='#'>Beauty Tips</a>
+                <a href='./about.html'>About</a>
+                <a href='#'>Contact</a>
             </div>
             <div class='copy-right'>
                 Copyright 2024, Carla Beauty
@@ -248,6 +259,34 @@
     </footer>
     <!-- //footer -->
 
+    <!-- message box -->
+    <div class="message-box-btns">
+        <button class="msgbox-open">
+            <i></i>
+            <span class="a11y-hidden">open</span>
+        </button>
+        <div class="msgbox">
+            <button class="msgbox-instagram">
+                <i></i>
+                <span class="a11y-hidden">instagram</span>
+            </button>
+            <button class="msgbox-call">
+                <i></i>
+                <span class="a11y-hidden">call</span>
+            </button>
+            <button class="msgbox-messenger">
+                <i></i>
+                <span class="a11y-hidden">messenger</span>
+            </button>
+            <button class="msgbox-close">
+                <i></i>
+                <span class="a11y-hidden">close</span>
+            </button>
+        </div>
+    </div>
+    <!-- //message box -->
+
+    <script src="./js/msgbox.js"></script>
     <script src="./js/header.js"></script>
     <script src="./js/portfolio.js"></script>
 </body>
