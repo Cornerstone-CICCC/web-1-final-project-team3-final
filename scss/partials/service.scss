@@ -1,0 +1,215 @@
+@use 'variables.scss';
+@import url('https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+
+.services {
+    margin: 1.5rem 0;
+    background-color: variables.$primary-color;
+}
+
+.services_title {
+    text-align: center;
+    font-size: 5rem;
+    color: variables.$text-darkbrown;
+}
+
+.services_separator {
+    width: 12.5rem;
+    margin: 0 auto;
+    border-bottom: 2px solid variables.$line-pink;
+}
+
+.services_subtitle {
+    text-align: center;
+    font-size: 1.125rem;
+    color: variables.$text-black;
+    padding: 2rem;
+}
+
+.services_list {
+    background-color: variables.$background-light-pink;
+    padding: 5rem 0;
+}
+
+.service_main {
+    margin: 2.5rem 0;
+    justify-items: center;
+    background-color: variables.$background-light-pink;
+}
+
+.service_frame {
+    background-color: variables.$background-light-pink;
+    display: flex;
+
+    .service_image_photo {
+        background-color: variables.$background-light-pink;
+    }
+
+    .service_image {
+        width: 20rem;
+        background-color: variables.$background-light-pink;
+    }
+}
+
+.service_context {
+    width: 100%;
+    max-width: 41.5rem;
+    padding: 0 2.5rem;
+    background-color: variables.$background-light-pink;
+}
+
+.service_name {
+    font-family: variables.$primary-font;
+    font-size: 2.5rem;
+    color: variables.$text-darkbrown;
+    padding: .75rem 0;
+    background-color: variables.$background-light-pink;
+}
+
+.service_business {
+    display: flex;
+    padding: .75rem 0;
+    background-color: variables.$background-light-pink;
+
+    .service_business_doller {
+        display: flex;
+        margin-right: 1.5rem;
+        font-family: sans-serif;
+        background-color: variables.$background-light-pink;
+
+        .service_business_doller_text {
+            font-family: 'Nunito';
+            font-weight: 300;
+            background-color: variables.$background-light-pink;
+        }
+
+        .service_business_doller_logo {
+            background-color: variables.$background-light-pink;
+        }
+
+        img {
+            background-color: variables.$background-light-pink;
+        }
+    }
+
+    .service_business_hour {
+        display: flex;
+        background-color: variables.$background-light-pink;
+
+        .service_business_hour_text {
+            font-family: 'Nunito';
+            font-weight: 300;
+            background-color: variables.$background-light-pink;
+        }
+
+        img {
+            background-color: variables.$background-light-pink;
+        }
+
+        .service_business_hour_logo {
+            background-color: variables.$background-light-pink;
+
+        }
+
+    }
+}
+
+.service_description {
+    padding: .75rem 0;
+    background-color: variables.$background-light-pink;
+
+}
+
+.service_description1 {
+    font-family: variables.$primary-font;
+    font-size: 1.5rem;
+    color: variables.$text-black;
+    margin-bottom: 0.5625rem;
+    background-color: variables.$background-light-pink;
+}
+
+.service_description2 {
+    font-size: 1.125rem;
+    color: variables.$text-black;
+    flex-wrap: wrap;
+    word-wrap: break-word;
+    background-color: variables.$background-light-pink;
+}
+
+.quote_btn {
+    display: inline-block;
+    border: 1px solid variables.$text-darkbrown;
+    padding: 1rem 1.5rem;
+    margin: .75rem 0;
+    font-size: 1.25rem;
+    background-color: variables.$background-light-pink;
+
+    &:hover {
+        background-color: variables.$text-darkbrown;
+        color: variables.$background-light-pink;
+    }
+}
+
+@media (max-width: 768px) {
+    .services_title {
+        font-size: 2.5rem;
+    }
+
+    .services_list {
+        padding: 0;
+    }
+
+    .service_main {
+        margin: 0;
+    }
+
+    .service_frame {
+        flex-direction: column;
+
+        .service_image {
+            width: 100%;
+            object-fit: contain;
+        }
+    }
+
+    .service_context {
+        padding: 0;
+        width: 100%;
+
+        .quote_btn {
+            display: block;
+            text-align: center;
+            margin: 0 1rem;
+        }
+    }
+
+    .service_name {
+        padding: 0 1rem;
+    }
+
+    .service_business {
+        padding: 0 1rem;
+        display: block;
+
+        .service_business_doller {
+            margin: .25rem 0;
+        }
+
+        .service_business_hour {
+            margin: .25rem 0;
+        }
+    }
+
+    .service_description1 {
+        padding: 0 1rem;
+    }
+
+    .service_description2 {
+        padding: 0 1rem;
+    }
+
+    .service_main {
+        padding-bottom: 2rem;
+    }
+
+}
