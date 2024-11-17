@@ -185,6 +185,7 @@ body.scroll {
         position: sticky;
         top: 0;
         width: 100%;
+        z-index: 200;
         .menus {
             height: 5rem;
             .logo {

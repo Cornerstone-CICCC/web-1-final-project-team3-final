@@ -15,6 +15,16 @@
         rel="stylesheet">
 
     <script src="./js/header.js" defer></script>
+    <!-- emailJS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init({
+                publicKey: "IFfWotEgis7HO_pGL",
+            });
+        })();
+    </script>
 </head>
 
 <body>
@@ -376,6 +386,129 @@
                 </div>
                 <div class='diy_beauty_button'>More Beauty Tips</div>
             </div>
+
+            <div class="talk">
+                <div class="page-header">
+                    <h2>Let's Talk</h2>
+                    <p>Check availability, pricing, and schedule a meeting for your special day or our academy services.
+                    </p>
+                </div>
+                <div class="page-contents">
+                    <div class="form-box">
+                        <h3>Service</h3>
+                        <form action="/" id="service-form">
+                            <div class="form">
+                                <h4>Event Type</h4>
+                                <div class="form-row type">
+                                    <label for="event_type1">
+                                        <input type="radio" name="event_type" id="event_type1" checked value="Wedding">
+                                        <span class="label">Wedding</span>
+                                        <span class="marker"></span>
+                                    </label>
+                                    <label for="event_type2">
+                                        <input type="radio" name="event_type" id="event_type2" value="Party">
+                                        <span class="label">Party</span>
+                                        <span class="marker"></span>
+                                    </label>
+                                    <label for="event_type3">
+                                        <input type="radio" name="event_type" id="event_type3" value="Photoshoot">
+                                        <span class="label">Photoshoot</span>
+                                        <span class="marker"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form form-columns">
+                                <div class="form-column">
+                                    <h4>Event Date</h4>
+                                    <div class="form-row">
+                                        <label for="event_date">
+                                            <input type="date" name="event_date" id="event_date"
+                                                placeholder="Select Date">
+                                        </label>
+                                        <div class="form-option">
+                                            <label for="not-decide1">
+                                                <input type="checkbox" name="event_date" id="not-decide1"
+                                                    value="Not decided">
+                                                <span class="label">Not decided</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-colum">
+                                    <h4>Event Time</h4>
+                                    <select name="event_time" id="event_time">
+                                        <option value="8">Full day</option>
+                                        <option value="4">Half day</option>
+                                        <option value="2">2 hours</option>
+                                    </select>
+                                    <div class="form-option">
+                                        <label for="not-decide2">
+                                            <input type="checkbox" name="event_time" id="not-decide2"
+                                                value="Not decided">
+                                            <span class="label">Not decided</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form">
+                                <h4>Name</h4>
+                                <div class="form-row">
+                                    <input type="text" placeholder="Your name" name="event_name" required>
+                                </div>
+                            </div>
+                            <div class="form contact">
+                                <h4>Contact</h4>
+                                <div class="form-row">
+                                    <input type="radio" name="event_contact" id="contact1" value="Call" checked>
+                                    <label for="contact1">Call</label>
+                                    <div class="contact-item set contact1">
+                                        <select name="event_contact_type_code">
+                                            <option value="1">+1</option>
+                                            <option value="2">+2</option>
+                                            <option value="3">+3</option>
+                                            <option value="4">+4</option>
+                                            <option value="5">+5</option>
+                                        </select>
+                                        <input type="text" name="event_contact_type" placeholder="Your mobile number"
+                                            pattern="[0-9]+">
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <input type="radio" name="event_contact" id="contact2" value="WhatsApp">
+                                    <label for="contact2">WhatsApp</label>
+                                    <div class="contact-item contact2">
+                                        <input type="text" name="event_contact_type" pattern="[A-Za-z0-9]+">
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <input type="radio" name="event_contact" id="contact3" value="SMS">
+                                    <label for="contact3">SMS</label>
+                                    <div class="contact-item set contact3">
+                                        <select name="event_contact_type_code">
+                                            <option value="1">+1</option>
+                                            <option value="2">+2</option>
+                                            <option value="3">+3</option>
+                                            <option value="4">+4</option>
+                                            <option value="5">+5</option>
+                                        </select>
+                                        <input type="text" name="event_contact_type" placeholder="Your mobile number"
+                                            pattern="[0-9]+">
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <input type="radio" name="event_contact" id="contact4" value="Email">
+                                    <label for="contact4">Email</label>
+                                    <div class="contact-item contact4">
+                                        <input type="email" name="event_contact_type"
+                                            pattern="[A-Za-z0-9]+@[A-Za-z0-9]+\.[A-Za-z]+">
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn-submit">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </main>
 
         <footer>
@@ -415,6 +548,9 @@
                 </div>
             </div>
         </footer>
+        <script src="./js/msgbox.js"></script>
+        <script src="./js/letstalk.js"></script>
+        <script src="./js/header.js"></script>
 </body>
 
 </html>
