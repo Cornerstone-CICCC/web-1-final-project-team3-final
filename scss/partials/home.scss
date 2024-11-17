@@ -58,7 +58,7 @@ header {
             display: flex;
             flex-direction: column;
             align-items: center;
-            color: black;
+            color: variables.$black;
             font-size: 1.375rem;
 
             .logo_img {
@@ -172,7 +172,7 @@ section.container-fluid {
         top: 45%;
         left: 50%;
         transform: translate(-50%, -50%);
-        color: black;
+        color: variables.$black;
         font-size: 24px;
         font-weight: bold;
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);

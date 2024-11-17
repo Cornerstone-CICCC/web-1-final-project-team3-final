@@ -58,7 +58,7 @@ label {
             align-items: center;
 
             .page-tab {
-                border-bottom: 1px solid #888;
+                border-bottom: 1px solid variables.$grey;
                 position: relative;
                 width: 50%;
 
@@ -76,17 +76,17 @@ label {
 
                 &.on {
                     .btn-tab {
-                        color: #181818;
+                        color: variables.$black;
                     }
 
                     &::after {
-                        background-color: #181818;
+                        background-color: variables.$black;
                     }
                 }
             }
 
             .btn-tab {
-                color: #888;
+                color: variables.$grey;
                 font-size: 24px;
                 padding: 16px 0;
                 width: 100%;
@@ -162,7 +162,7 @@ label {
 
             &:hover {
                 background-color: variables.$dark-brown;
-                color: #fff;
+                color: variables.$white;
             }
 
             &.hide {

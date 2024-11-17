@@ -91,12 +91,12 @@
 
         input[type="date"] {
             padding: 11px 12px;
-            background: #fff url(./../../img/form/icon-calendar.svg) no-repeat right 12px center;
+            background: variables.$white url(./../../img/form/icon-calendar.svg) no-repeat right 12px center;
         }
 
         select {
             padding-right: 50px;
-            background: #fff url(./../../img/form/icon-arrow_down.svg) no-repeat right 12px center;
+            background: variables.$white url(./../../img/form/icon-arrow_down.svg) no-repeat right 12px center;
         }
 
         .form {
@@ -139,7 +139,7 @@
                         select {
                             padding-left: 50px;
                             padding-right: 0;
-                            background: #fff url(./../../img/form/icon-arrow_down.svg) no-repeat left 12px center;
+                            background: variables.$white url(./../../img/form/icon-arrow_down.svg) no-repeat left 12px center;
                         }
                     }
                 }
@@ -160,7 +160,7 @@
 
                 input[type="radio"]:checked {
                     accent-color: variables.$dark-pink;
-                    color-scheme: dark;
+                    color-scheme: variables.$black;
                 }
 
                 input[name="event_contact"] {
@@ -177,7 +177,7 @@
                         left: 0;
                         border: 1px solid variables.$dark-pink;
                         border-radius: 50%;
-                        background-color: #fff;
+                        background-color: variables.$white;
                     }
 
                     &:checked::after {
@@ -217,9 +217,9 @@
                         font-size: 20px;
                         font-family: variables.$primary-font;
                         width: 100%;
-                        background-color: #fff;
+                        background-color: variables.$white;
                         padding: 10px;
-                        border: 1px solid #fff;
+                        border: 1px solid variables.$white;
                     }
                 }
 
@@ -271,7 +271,7 @@
                         top: 0;
                         left: 0;
                         border: 1px solid variables.$dark-pink;
-                        background-color: #fff;
+                        background-color: variables.$white;
                         transition: all .2s ease-in-out;
                     }
 
@@ -296,7 +296,7 @@
 
         &:hover {
             background-color: variables.$dark-brown;
-            color: #fff;
+            color: variables.$white;
         }
     }
 }

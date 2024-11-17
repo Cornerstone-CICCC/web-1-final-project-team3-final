@@ -46,7 +46,7 @@
         }
 
         &.msgbox-instagram {
-            background-color: #C13ED4;
+            background-color: variables.$msgbox-pink;
 
             i {
                 background-image: url(./../../img/common/i-msgbox_instagram.svg);
@@ -54,7 +54,7 @@
         }
 
         &.msgbox-call {
-            background-color: #6AA2BA;
+            background-color: variables.$msgbox-skyblue;
 
             i {
                 background-image: url(./../../img/common/i-msgbox_call.svg);
@@ -62,7 +62,7 @@
         }
 
         &.msgbox-messenger {
-            background-color: #25D366;
+            background-color: variables.$msgbox-green;
 
             i {
                 background-image: url(./../../img/common/i-msgbox_messenger.svg);
