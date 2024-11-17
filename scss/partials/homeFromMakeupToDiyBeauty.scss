@@ -3,14 +3,14 @@
 .home_hairstyle_title {
     font-size: 5rem;
     text-align: center;
-    color: variables.$text-darkbrown;
+    color: variables.$dark-brown;
     letter-spacing: 0.65rem;
 }
 
 .separator {
     width: 12.5rem;
     margin: 2rem auto;
-    border-bottom: 2px solid variables.$line-pink;
+    border-bottom: 2px solid variables.$pink;
 }
 
 .home_hairstyle_description {
@@ -21,16 +21,16 @@
 
 .home_hairstyle_button {
     display: block;
-    border: 1px solid variables.$text-darkbrown;
+    border: 1px solid variables.$dark-brown;
     padding: 1rem 1.5rem;
     margin: .75rem 40%;
     font-size: 1.25rem;
-    background-color: variables.$testimonial-bk-color;
+    background-color: variables.$light-pink;
     text-align: center;
 
     &:hover {
-        background-color: variables.$text-darkbrown;
-        color: variables.$testimonial-bk-color;
+        background-color: variables.$dark-brown;
+        color: variables.$light-pink;
     }
 }
 
@@ -65,7 +65,7 @@
             position: absolute;
             top: 65%;
             left: -16%;
-            color: variables.$menu-line;
+            color: variables.$pink;
             font-size: 4rem;
             transition: transform 0.3s ease-in-out;
 
@@ -83,7 +83,7 @@
             width: 18.625rem;
             height: 24rem;
             background: transparent;
-            border: 1px solid variables.$line-pink;
+            border: 1px solid variables.$pink;
             transition: transform 0.3s ease-in-out;
             transform: scale(0);
         }
@@ -123,14 +123,14 @@
 }
 
 .home_makeup {
-    background-color: variables.$testimonial-bk-color;
+    background-color: variables.$light-pink;
     padding: 2rem;
     margin: 2rem 8rem;
 
     .home_makeup_title {
         font-size: 5rem;
         text-align: center;
-        color: variables.$text-darkbrown;
+        color: variables.$dark-brown;
         letter-spacing: 0.65rem;
         background-color: transparent;
         margin: 5rem;
@@ -156,7 +156,7 @@
                         align-items: center;
                         font-size: 2rem;
                         font-family: variables.$primary-font;
-                        color: variables.$text-darkbrown;
+                        color: variables.$dark-brown;
                         margin: .5rem 0;
 
                     }
@@ -165,7 +165,7 @@
                         font-size: 1.125rem;
                         padding: 1rem 0;
                         max-width: 30rem;
-                        font-family: variables.$text-black;
+                        font-family: variables.$black;
                     }
                 }
 
@@ -180,7 +180,7 @@
                 }
 
                 &:hover {
-                    background-color: variables.$menu-line;
+                    background-color: variables.$pink;
                 }
             }
         }
@@ -191,15 +191,15 @@
 
         .home_makeup_button {
             display: inline-block;
-            border: 1px solid variables.$text-darkbrown;
+            border: 1px solid variables.$dark-brown;
             padding: 1rem 1.5rem;
             margin: .75rem 0;
             font-size: 1.25rem;
-            background-color: variables.$testimonial-bk-color;
+            background-color: variables.$light-pink;
 
             &:hover {
                 background-color: variables.$dark-pink;
-                color: variables.$testimonial-bk-color;
+                color: variables.$light-pink;
                 border: none;
             }
         }
@@ -278,7 +278,7 @@
     .home_diy_title {
         font-size: 3rem;
         text-align: center;
-        color: variables.$text-darkbrown;
+        color: variables.$dark-brown;
     }
 
     .diy_beauty_corner_images {
@@ -302,7 +302,7 @@
 
 .diy_beauty_button {
     display: inline-block;
-    border: 1px solid variables.$text-darkbrown;
+    border: 1px solid variables.$dark-brown;
     padding: 1rem 1.5rem;
     margin: .75rem 45%;
     font-size: 1.25rem;
@@ -311,7 +311,7 @@
 
     &:hover {
         background-color: variables.$dark-pink;
-        color: variables.$testimonial-bk-color;
+        color: variables.$light-pink;
         border: none;
     }
 }
@@ -352,7 +352,7 @@
             display: block;
             width: 12.5rem;
             margin: 2rem auto;
-            border-bottom: 2px solid variables.$line-pink;
+            border-bottom: 2px solid variables.$pink;
         }
 
         .home_diy_title {

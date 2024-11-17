@@ -17,7 +17,7 @@ header {
         justify-content: space-around;
         align-items: center;
         height: 12.25rem;
-        color: variables.$text-darkbrown;
+        color: variables.$dark-brown;
         font-size: 1.25rem;
         width: 100%;
 
@@ -48,7 +48,7 @@ header {
             }
 
             a:not(:last-child) {
-                border-right: .125rem solid variables.$line-pink;
+                border-right: .125rem solid variables.$pink;
             }
 
 
@@ -82,7 +82,7 @@ header {
             span {
                 width: 1.5625rem;
                 height: .125rem;
-                background-color: variables.$text-darkbrown;
+                background-color: variables.$dark-brown;
                 display: block;
             }
 
@@ -129,7 +129,7 @@ header {
 
                 .mobile-logo {
                     text-align: center;
-                    color: variables.$text-black;
+                    color: variables.$black;
 
                     .logo_img {
                         height: 4rem;
@@ -214,7 +214,7 @@ section.container-fluid {
             li {
                 a {
                     padding: 1rem;
-                    color: variables.$li-color;
+                    color: variables.$dark-brown;
                     width: 41px;
                     height: 41px;
                 }
@@ -314,7 +314,7 @@ main {
 
         .my-work {
             position: relative;
-            background-color: #FAE9E7;
+            background-color: variables.$light-pink;
             padding-top: 120px;
 
             .my-work-title {
@@ -347,21 +347,21 @@ main {
                 transform: translateX(-50%);
                 background-color: transparent;
                 font-family: variables.$primary-font;
-                color: variables.$text-darkbrown;
+                color: variables.$dark-brown;
                 font-size: 20px;
-                border: 2px solid variables.$text-darkbrown;
+                border: 2px solid variables.$dark-brown;
                 padding: 24px 32px;
 
                 &:hover {
-                    background-color: #B99692;
-                    border: 2px solid #B99692;
+                    background-color: variables.$dark-pink;
+                    border: 2px solid variables.$dark-pink;
                     color: variables.$primary-color;
                 }
             }
         }
 
         .album {
-            background-color: #FAE9E7;
+            background-color: variables.$light-pink;
             padding: 120px 0;
             gap: 80px;
 
@@ -384,7 +384,7 @@ main {
 
         //Carousel - testimonials
         .carousel {
-            background-color: #FAE9E7;
+            background-color: variables.$light-pink;
             display: flex;
             justify-content: center;
             align-items: center;

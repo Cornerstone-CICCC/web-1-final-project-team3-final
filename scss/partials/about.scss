@@ -3,13 +3,13 @@
 .title,
 .site_name {
     text-align: center;
-    color: variables.$line-pink;
+    color: variables.$pink;
     font-size: 3rem;
 }
 
 .site_name {
     font-size: 5rem;
-    color: variables.$text-darkbrown;
+    color: variables.$dark-brown;
     margin: 2rem;
 }
 
@@ -39,7 +39,7 @@
         .profile_greeting {
             font-family: variables.$primary-font;
             font-size: 3rem;
-            color: variables.$text-darkbrown;
+            color: variables.$dark-brown;
             background-color: transparent;
 
         }
@@ -53,7 +53,7 @@
 
         .mywork {
             font-size: 1.25rem;
-            border: 1px solid variables.$text-darkbrown;
+            border: 1px solid variables.$dark-brown;
             background-color: transparent;
 
             display: inline-block;
@@ -61,7 +61,7 @@
             transition: background-color 0.3s, color 0.3s;
 
             &:hover {
-                background-color: variables.$text-darkbrown;
+                background-color: variables.$dark-brown;
                 color: variables.$light-pink;
             }
         }
@@ -73,7 +73,7 @@
 
     .brand_name {
         font-family: variables.$primary-font;
-        color: variables.$text-darkbrown;
+        color: variables.$dark-brown;
         font-size: 3rem;
         text-align: center;
         padding: 1rem;
