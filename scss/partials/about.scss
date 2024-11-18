@@ -1,0 +1,135 @@
+@use 'variables.scss';
+
+.title,
+.site_name {
+    text-align: center;
+    color: variables.$pink;
+    font-size: 3rem;
+}
+
+.site_name {
+    font-size: 5rem;
+    color: variables.$dark-brown;
+    margin: 2rem;
+}
+
+.founder_profile {
+    display: flex;
+    justify-content: center;
+    background-color: variables.$light-pink;
+    padding: 3rem;
+
+    .profile_frame {
+        width: 100%;
+        max-width: 73.125rem;
+        display: flex;
+        background-color: inherit;
+    }
+
+    .profile_image {
+        background-color: inherit;
+        width: 21.9375rem;
+    }
+
+    .profile_text {
+        padding: 2rem;
+        max-width: 48.6875rem;
+        background-color: transparent;
+
+        .profile_greeting {
+            font-family: variables.$primary-font;
+            font-size: 3rem;
+            color: variables.$dark-brown;
+            background-color: transparent;
+
+        }
+
+        .profile_description {
+            padding: 1rem 0;
+            font-size: 1.125rem;
+            background-color: transparent;
+
+        }
+
+        .mywork {
+            font-size: 1.25rem;
+            border: 1px solid variables.$dark-brown;
+            background-color: transparent;
+
+            display: inline-block;
+            padding: 1rem;
+            transition: background-color 0.3s, color 0.3s;
+
+            &:hover {
+                background-color: variables.$dark-brown;
+                color: variables.$light-pink;
+            }
+        }
+    }
+}
+
+.brand {
+    margin-bottom: 4rem;
+
+    .brand_name {
+        font-family: variables.$primary-font;
+        color: variables.$dark-brown;
+        font-size: 3rem;
+        text-align: center;
+        padding: 1rem;
+    }
+
+    .brand_logos {
+        margin: 2rem;
+        display: grid;
+        gap: 2rem;
+        grid-template-columns: repeat(4, 1fr);
+        justify-items: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .title {
+        font-size: 2.25rem;
+    }
+
+    .site_name {
+        font-size: 2.0625rem;
+        letter-spacing: 0.65rem;
+    }
+
+    .founder_profile {
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+
+        .profile_frame {
+            flex-direction: column;
+        }
+
+        .profile_image {
+            .founder_image {
+                width: 100%;
+            }
+
+            width: 100%;
+        }
+
+        .profile_text .mywork {
+            display: flex;
+            justify-content: center;
+            margin: 0 3rem;
+        }
+    }
+
+    .brand {
+        .brand_name {
+            font-size: 2rem;
+        }
+
+        .brand_logos {
+            margin: 1rem 1.5rem;
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+}

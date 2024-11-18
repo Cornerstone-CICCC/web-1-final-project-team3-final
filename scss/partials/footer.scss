@@ -1,0 +1,112 @@
+@use 'variables.scss';
+
+/* using footer and hamburger menu both */
+.menu-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+
+    i {
+        display: block;
+        width: 1.5rem;
+        height: 1.5rem;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .phone {
+        background-image: url(./../../img/common/phone.svg);
+    }
+
+    .whatsapp {
+        background-image: url(./../../img/common/whatsapp.svg);
+    }
+
+    .instagram {
+        background-image: url(./../../img/common/instagram.svg);
+    }
+}
+
+footer {
+    padding-top: 1.875rem;
+    color: variables.$dark-brown;
+    background-color: variables.$primary-color;
+
+    .footer_content {
+        max-width: 1440px;
+        margin: 0 auto;
+        text-align: center;
+
+        .logo {
+            div {
+                color: variables.$black;
+                font-size: 1.5rem;
+            }
+        }
+
+        .subtitle {
+            margin: 1rem 0;
+            font-size: .875rem;
+            font-family: variables.$secondary-font;
+            font-weight: 300;
+        }
+
+        .footer_menu {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            align-items: center;
+            padding: 1.375rem 1.625rem;
+            margin: 1.5rem 3rem 0;
+            border-top: .0625rem solid variables.$black;
+            border-bottom: .0625rem solid variables.$black;
+
+            a {
+                color: inherit;
+                text-decoration: none;
+                font-size: 1.25rem;
+
+                &:hover {
+                    text-decoration: underline;
+                    text-decoration-thickness: 1px;
+                    text-underline-offset: 2px;
+                }
+            }
+        }
+
+        .copy-right {
+            font-size: .875rem;
+            padding: 2rem;
+            font-family: variables.$secondary-font;
+            font-weight: 100;
+        }
+
+        @media (max-width: 1000px) {
+            .footer_menu {
+                grid-template-columns: repeat(4, 1fr);
+
+                a {
+                    padding: .5rem 0;
+                }
+            }
+        }
+
+        @media (max-width: 768px) {
+            .footer_menu {
+                grid-template-columns: repeat(2, 1fr);
+                padding-top: .3125rem;
+                padding-bottom: .3125rem;
+                margin-left: 1rem;
+                margin-right: 1rem;
+
+                a {
+                    font-size: 1.25rem;
+                }
+            }
+
+            .copy-right {
+                font-size: .875rem;
+            }
+        }
+    }
+}
