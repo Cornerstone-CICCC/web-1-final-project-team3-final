@@ -5,6 +5,7 @@
     text-align: center;
     color: variables.$dark-brown;
     letter-spacing: 0.65rem;
+    margin-top: 7.5rem;
 }
 
 .separator {
@@ -301,6 +302,7 @@
 
 .home_diy_beauty {
     margin-top: 4rem;
+    text-align: center;
 
     .home_diy_beauty_separator {
         display: none;
@@ -335,7 +337,6 @@
     display: inline-block;
     border: 1px solid variables.$dark-brown;
     padding: 1rem 1.5rem;
-    margin: .75rem 45%;
     font-size: 1.25rem;
     background-color: variables.$primary-color;
     text-align: center;
@@ -343,7 +344,7 @@
     &:hover {
         background-color: variables.$dark-pink;
         color: variables.$light-pink;
-        border: none;
+        border-color: variables.$dark-pink;
     }
 }
 
