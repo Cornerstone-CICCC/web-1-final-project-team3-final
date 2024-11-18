@@ -186,13 +186,10 @@
                         width: 14px;
                         height: 14px;
                         position: absolute;
-                        <<<<<<< HEAD top: 3px;
+                        top: 3px;
                         left: 3px;
-                        background-color: #B99692;
-                        =======top: 4px;
-                        left: 4px;
                         background-color: variables.$dark-pink;
-                        >>>>>>>1094de9 (modify color var) border-radius: 50%;
+                        border-radius: 50%;
                     }
                 }
             }
@@ -313,11 +310,9 @@
         }
 
         .page-contents {
-            <<<<<<< HEAD padding: 0;
-            =======padding-left: 0;
-            padding-right: 0;
+            padding: 0;
 
-            >>>>>>>1094de9 (modify color var) .form-box {
+            .form-box {
                 padding-left: 16px;
                 padding-right: 16px;
             }
