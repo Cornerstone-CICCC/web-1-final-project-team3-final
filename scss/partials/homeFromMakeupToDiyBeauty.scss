@@ -112,11 +112,42 @@
                 transform: translate(-50%, -50%);
                 color: variables.$primary-color;
                 font-size: 3.125rem;
-                transition: transform 0.3s ease-in-out;
+                transition: none;
 
                 &::first-letter {
                     color: variables.$primary-color;
                 }
+            }
+
+            img {
+                transition: none;
+
+                &:hover {
+                    transform: none;
+
+                    +.hairstyle_image_title {
+                        transform: none;
+                    }
+
+                    ~.hairstyle_box {
+                        z-index: -1;
+                        transform: none;
+                    }
+                }
+            }
+
+            .hairstyle_box {
+                position: absolute;
+                z-index: -1;
+                top: -10%;
+                left: 10%;
+                margin: auto;
+                width: 18.625rem;
+                height: 24rem;
+                background: transparent;
+                border: 1px solid variables.$pink;
+                transition: none;
+                transform: s;
             }
         }
     }
@@ -370,6 +401,10 @@
         justify-content: unset;
         margin: 0;
         overflow-x: scroll;
+    }
+
+    .slide-wrap::-webkit-scrollbar {
+        display: none;
     }
 
     .slide-box {
