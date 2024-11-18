@@ -1,13 +1,12 @@
 @use 'variables.scss';
 
-@import url('https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
-
 /* using footer and hamburger menu both */
 .menu-icons {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 1.5rem;
+
     i {
         display: block;
         width: 1.5rem;
@@ -15,12 +14,15 @@
         background-position: center;
         background-repeat: no-repeat;
     }
+
     .phone {
         background-image: url(./../../img/common/phone.svg);
     }
+
     .whatsapp {
         background-image: url(./../../img/common/whatsapp.svg);
     }
+
     .instagram {
         background-image: url(./../../img/common/instagram.svg);
     }
@@ -28,7 +30,7 @@
 
 footer {
     padding-top: 1.875rem;
-    color: variables.$text-darkbrown;
+    color: variables.$dark-brown;
     background-color: variables.$primary-color;
 
     .footer_content {
@@ -38,7 +40,7 @@ footer {
 
         .logo {
             div {
-                color: variables.$text-black;
+                color: variables.$black;
                 font-size: 1.5rem;
             }
         }
@@ -46,7 +48,7 @@ footer {
         .subtitle {
             margin: 1rem 0;
             font-size: .875rem;
-            font-family: "Nunito", sans-serif;
+            font-family: variables.$secondary-font;
             font-weight: 300;
         }
 
@@ -56,13 +58,14 @@ footer {
             align-items: center;
             padding: 1.375rem 1.625rem;
             margin: 1.5rem 3rem 0;
-            border-top: .0625rem solid variables.$text-black;
-            border-bottom: .0625rem solid variables.$text-black;
+            border-top: .0625rem solid variables.$black;
+            border-bottom: .0625rem solid variables.$black;
 
             a {
                 color: inherit;
                 text-decoration: none;
                 font-size: 1.25rem;
+
                 &:hover {
                     text-decoration: underline;
                     text-decoration-thickness: 1px;
@@ -74,13 +77,14 @@ footer {
         .copy-right {
             font-size: .875rem;
             padding: 2rem;
-            font-family: "Nunito", sans-serif;
+            font-family: variables.$secondary-font;
             font-weight: 100;
         }
 
         @media (max-width: 1000px) {
             .footer_menu {
                 grid-template-columns: repeat(4, 1fr);
+
                 a {
                     padding: .5rem 0;
                 }
@@ -94,6 +98,7 @@ footer {
                 padding-bottom: .3125rem;
                 margin-left: 1rem;
                 margin-right: 1rem;
+
                 a {
                     font-size: 1.25rem;
                 }
@@ -105,4 +110,3 @@ footer {
         }
     }
 }
-

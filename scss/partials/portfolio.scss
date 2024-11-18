@@ -1,8 +1,6 @@
 @use "variables";
 @use "reset";
 
-@import url('https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
-
 button,
 label {
     cursor: pointer;
@@ -11,19 +9,22 @@ label {
 .portfolio {
     text-align: center;
     margin-bottom: 42px;
+
     .page-header {
         padding: 46px 0 40px;
+
         h2 {
             font-family: variables.$primary-font, serif;
             font-size: 40px;
             line-height: 40px;
             text-transform: uppercase;
-            color: variables.$text-darkbrown;
+            color: variables.$dark-brown;
             position: relative;
             padding-bottom: 28px;
             margin-bottom: 28px;
             font-weight: 400;
             letter-spacing: 6px;
+
             &::after {
                 content: "";
                 display: block;
@@ -33,29 +34,34 @@ label {
                 bottom: 0;
                 width: 139px;
                 height: 1px;
-                background-color: #E3B6B1;
+                background-color: variables.$pink;
             }
         }
+
         p {
             font-size: 16px;
-            font-family: "Nunito", sans-serif;
+            font-family: variables.$secondary-font;
             padding: 0 2rem;
             font-weight: 200;
             line-height: 28px;
         }
     }
+
     .page-tabs {
         margin-bottom: 24px;
         width: 100%;
         max-width: 335px;
+
         ul {
             display: flex;
             justify-content: center;
             align-items: center;
+
             .page-tab {
-                border-bottom: 1px solid #888;
+                border-bottom: 1px solid variables.$grey;
                 position: relative;
                 width: 50%;
+
                 &::after {
                     content: "";
                     display: block;
@@ -67,17 +73,20 @@ label {
                     transition: all .3s ease-in-out;
                     z-index: 1;
                 }
+
                 &.on {
                     .btn-tab {
-                        color: #181818;
+                        color: variables.$black;
                     }
+
                     &::after {
-                        background-color: #181818;
+                        background-color: variables.$black;
                     }
                 }
             }
+
             .btn-tab {
-                color: #888;
+                color: variables.$grey;
                 font-size: 24px;
                 padding: 16px 0;
                 width: 100%;
@@ -85,37 +94,46 @@ label {
                 appearance: none;
                 background-color: transparent;
                 position: relative;
-                font-family: "Baskervville", serif;
+                font-family: variables.$primary-font;
                 transition: all .3s ease-in-out;
             }
         }
     }
+
     .page-contents {
         display: flex;
         flex-direction: column;
         align-items: center;
-        background-color: #FAE9E7;
+        background-color: variables.$light-pink;
         padding: 44px 20px 90px;
-        ol, ul, li {
+
+        ol,
+        ul,
+        li {
             list-style: none;
         }
+
         article {
             &.hide {
                 display: none;
             }
+
             ul {
                 display: grid;
                 grid-template-columns: repeat(1, 1fr);
                 row-gap: 12px;
             }
+
             li {
                 display: none;
                 max-height: 298px;
                 overflow: hidden;
                 position: relative;
+
                 &.show {
                     display: block;
                 }
+
                 &::after {
                     content: "";
                     display: block;
@@ -127,22 +145,26 @@ label {
                     background: url(./../../img/portfolio/watermark.png) no-repeat center;
                 }
             }
+
             img {
                 width: 100%;
             }
         }
+
         .btn-more {
-            border: 1px solid variables.$text-darkbrown;
-            color: variables.$text-darkbrown;
+            border: 1px solid variables.$dark-brown;
+            color: variables.$dark-brown;
             padding: 15px 32px;
             background-color: transparent;
             font-size: 20px;
             margin-top: 30px;
             transition: all .3s ease-in-out;
+
             &:hover {
-                background-color: variables.$text-darkbrown;
-                color: #fff;
+                background-color: variables.$dark-brown;
+                color: variables.$white;
             }
+
             &.hide {
                 display: none;
             }
@@ -163,29 +185,36 @@ label {
     .portfolio {
         .page-header {
             padding-bottom: 22px;
+
             h2 {
                 font-size: 80px;
                 line-height: 80px;
                 padding-bottom: 24px;
                 margin-bottom: 24px;
+
                 &::after {
                     width: 200px;
                 }
             }
+
             p {
                 font-size: 18px;
                 padding: 0 5rem;
             }
         }
+
         .page-contents {
             padding-bottom: 120px;
+
             article {
                 ul {
                     grid-template-columns: repeat(2, 1fr);
                     gap: 16px;
+
                     li {
                         width: 335px;
                         height: 347px;
+
                         &::after {
                             bottom: 0;
                             right: 0;
@@ -195,6 +224,7 @@ label {
                     }
                 }
             }
+
             .btn-more {
                 padding: 17px 32px;
                 margin-top: 60px;
@@ -207,19 +237,23 @@ label {
     .portfolio {
         .page-tabs {
             max-width: 460px;
+
             ul .btn-tab {
                 font-size: 32px;
             }
         }
+
         .page-header {
             h2 {
                 letter-spacing: 13px;
             }
+
             p {
                 line-height: 24px;
                 padding: 0 320px;
             }
         }
+
         .page-contents {
             article {
                 ul {

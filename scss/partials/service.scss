@@ -1,5 +1,4 @@
 @use 'variables.scss';
-@import url('https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 
 
 .services {
@@ -10,44 +9,44 @@
 .services_title {
     text-align: center;
     font-size: 5rem;
-    color: variables.$text-darkbrown;
+    color: variables.$dark-brown;
 }
 
 .services_separator {
     width: 12.5rem;
     margin: 0 auto;
-    border-bottom: 2px solid variables.$line-pink;
+    border-bottom: 2px solid variables.$pink;
 }
 
 .services_subtitle {
     text-align: center;
     font-size: 1.125rem;
-    color: variables.$text-black;
+    color: variables.$black;
     padding: 2rem;
 }
 
 .services_list {
-    background-color: variables.$background-light-pink;
+    background-color: variables.$light-pink;
     padding: 5rem 0;
 }
 
 .service_main {
     margin: 2.5rem 0;
     justify-items: center;
-    background-color: variables.$background-light-pink;
+    background-color: variables.$light-pink;
 }
 
 .service_frame {
-    background-color: variables.$background-light-pink;
+    background-color: variables.$light-pink;
     display: flex;
 
     .service_image_photo {
-        background-color: variables.$background-light-pink;
+        background-color: variables.$light-pink;
     }
 
     .service_image {
         width: 20rem;
-        background-color: variables.$background-light-pink;
+        background-color: variables.$light-pink;
     }
 }
 
@@ -55,59 +54,59 @@
     width: 100%;
     max-width: 41.5rem;
     padding: 0 2.5rem;
-    background-color: variables.$background-light-pink;
+    background-color: variables.$light-pink;
 }
 
 .service_name {
     font-family: variables.$primary-font;
     font-size: 2.5rem;
-    color: variables.$text-darkbrown;
+    color: variables.$dark-brown;
     padding: .75rem 0;
-    background-color: variables.$background-light-pink;
+    background-color: variables.$light-pink;
 }
 
 .service_business {
     display: flex;
     padding: .75rem 0;
-    background-color: variables.$background-light-pink;
+    background-color: variables.$light-pink;
 
     .service_business_doller {
         display: flex;
         margin-right: 1.5rem;
-        font-family: sans-serif;
-        background-color: variables.$background-light-pink;
+        font-family: variables.$secondary-font;
+        background-color: variables.$light-pink;
 
         .service_business_doller_text {
-            font-family: 'Nunito';
+            font-family: variables.$secondary-font;
             font-weight: 300;
-            background-color: variables.$background-light-pink;
+            background-color: variables.$light-pink;
         }
 
         .service_business_doller_logo {
-            background-color: variables.$background-light-pink;
+            background-color: variables.$light-pink;
         }
 
         img {
-            background-color: variables.$background-light-pink;
+            background-color: variables.$light-pink;
         }
     }
 
     .service_business_hour {
         display: flex;
-        background-color: variables.$background-light-pink;
+        background-color: variables.$light-pink;
 
         .service_business_hour_text {
-            font-family: 'Nunito';
+            font-family: variables.$secondary-font;
             font-weight: 300;
-            background-color: variables.$background-light-pink;
+            background-color: variables.$light-pink;
         }
 
         img {
-            background-color: variables.$background-light-pink;
+            background-color: variables.$light-pink;
         }
 
         .service_business_hour_logo {
-            background-color: variables.$background-light-pink;
+            background-color: variables.$light-pink;
 
         }
 
@@ -116,37 +115,37 @@
 
 .service_description {
     padding: .75rem 0;
-    background-color: variables.$background-light-pink;
+    background-color: variables.$light-pink;
 
 }
 
 .service_description1 {
     font-family: variables.$primary-font;
     font-size: 1.5rem;
-    color: variables.$text-black;
+    color: variables.$black;
     margin-bottom: 0.5625rem;
-    background-color: variables.$background-light-pink;
+    background-color: variables.$light-pink;
 }
 
 .service_description2 {
     font-size: 1.125rem;
-    color: variables.$text-black;
+    color: variables.$black;
     flex-wrap: wrap;
     word-wrap: break-word;
-    background-color: variables.$background-light-pink;
+    background-color: variables.$light-pink;
 }
 
 .quote_btn {
     display: inline-block;
-    border: 1px solid variables.$text-darkbrown;
+    border: 1px solid variables.$dark-brown;
     padding: 1rem 1.5rem;
     margin: .75rem 0;
     font-size: 1.25rem;
-    background-color: variables.$background-light-pink;
+    background-color: variables.$light-pink;
 
     &:hover {
-        background-color: variables.$text-darkbrown;
-        color: variables.$background-light-pink;
+        background-color: variables.$dark-brown;
+        color: variables.$light-pink;
     }
 }
 
