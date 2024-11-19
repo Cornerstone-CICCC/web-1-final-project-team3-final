@@ -180,6 +180,7 @@
                 max-width: 34rem;
                 margin-right: 4rem;
                 padding: 0 1rem 1rem 1rem;
+                text-decoration: none;
 
                 .card_left {
 
@@ -198,6 +199,7 @@
                         padding: 1rem 0;
                         max-width: 30rem;
                         font-family: variables.$black;
+                        color: variables.$dark-brown;
                     }
                 }
 
@@ -279,6 +281,7 @@
                             display: block;
                             margin-right: 1rem;
                             font-size: 1.25rem;
+                            color: variables.$dark-brown;
                         }
 
                         .vector {
